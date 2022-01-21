@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@721165407:1579007692554" name="SkillDecision" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Skill Decision" default_exit_state="Others">
+        <exit_state name="BB" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="SKILLGROUP" />
+                </data>
+                <constant_string value="BB" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

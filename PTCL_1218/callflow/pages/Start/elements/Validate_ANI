@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@463338509:1582264833476" name="Validate_ANI" version="6.0.1">
+<config>
+<source type="Class">com.ef.clients.ptcl.ValidateOnNetANI</source>
+</config>
+</action>

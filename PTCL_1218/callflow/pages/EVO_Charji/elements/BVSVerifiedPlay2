@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@433278041:1576858407606" name="BVSVerifiedPlay2" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="device verify on" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/verified_on.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="date" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="ddmmyyyy" output_format="date" type="date">{Data.Session.BVS_date}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard_date" type="wav">sayitsmart/EN/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="time" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="period_hhmmss" output_format="period" type="time">{Data.Session.BVS_time}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard_period" type="wav">sayitsmart/EN/</recorded_audio>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

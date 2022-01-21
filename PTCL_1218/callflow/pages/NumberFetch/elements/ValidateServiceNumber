@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@4338717:1331243148914" name="ValidateServiceNumber" version="6.0.1">
+<config>
+<source type="Class">com.ef.clients.ptcl.ValidateServiceNumber</source>
+</config>
+</decision>

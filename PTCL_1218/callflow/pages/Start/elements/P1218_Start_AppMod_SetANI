@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@436190913:1627029176040" name="P1218_Start_AppMod_SetANI" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="Before" name="SERVICE_NO">{Data.Session.ani}</data>
+<data create_when="Before" name="ALTERNATE_NO">{Data.Session.ani}</data>
+<data create_when="Before" name="CF_SERVICE_NO">{Data.Session.ani}</data>
+<data create_when="Before" name="MakeServiceNo">{Data.Session.ani}</data>
+</session_data>
+</config>
+</action_element>

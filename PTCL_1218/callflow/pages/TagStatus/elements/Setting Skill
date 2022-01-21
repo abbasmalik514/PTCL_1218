@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@7429203:1502875352640" name="Setting Skill" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer">abdulwahe</setting>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="After" name="SKILLGROUP">PlatinumPlus</data>
+<data create_when="After" name="SERVICE_NO">{Data.Session.ani}</data>
+<data create_when="After" name="ALTERNATE_NO">{Data.Session.ani}</data>
+<data create_when="After" name="PRODUCT_CODE">NA</data>
+<data create_when="After" name="IS_AUTO">NO</data>
+<data create_when="After" name="PRIORITY">1</data>
+</session_data>
+</config>
+</action_element>

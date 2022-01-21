@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1857170337:1641894153883" name="CheckWrongInput" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CheckWrongInput" default_exit_state="Expire">
+        <exit_state name="Available" conjugate="and">
+            <number operator="less">
+                <data>
+                    <element name="WrongInputCounter" variable="count" />
+                </data>
+                <constant_number value="3" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

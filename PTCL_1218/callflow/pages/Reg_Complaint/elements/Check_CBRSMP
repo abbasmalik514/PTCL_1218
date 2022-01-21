@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@754243992:1634035693939" name="Check_CBRSMP" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check_CBRSMP" default_exit_state="No">
+        <exit_state name="SMP" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="CBRList" />
+                </data>
+                <constant_string value="SMP" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

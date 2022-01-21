@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@307466343:1639480442041" name="Copy_of_SetPC" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="Before" name="PC">PSTN</data>
+<data create_when="Before" name="flowStatus">SR Exist</data>
+<data create_when="Before" name="SG">BB</data>
+<data create_when="Before" name="SKILLGROUP">BB</data>
+</session_data>
+</config>
+</action_element>

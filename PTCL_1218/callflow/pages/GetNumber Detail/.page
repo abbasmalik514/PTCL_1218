@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@15200104:1464614687210" name="GetNumber Detail" version="6.0.1">
+<element height="46" id="Element@18261695:1464614687210" name="GetNumberDetail" type="Page Entry" width="142" x="-398" y="13">
+<exit_states>
+<exit_state name="next" target="Element@27390203:1519976147382"/>
+</exit_states>
+</element>
+<element height="46" id="Element@10289773:1464614998013" name="MaxInputWrongInput" type="Page Connector" width="164" x="848" y="1156">
+<page_connector target="Element@7400704:1398323921478">MaxInputWrongInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@680241:1464614998013" name="ComplaintExists" type="Decision" width="134" x="626" y="324">
+<exit_states>
+<exit_state name="YES" target="Element@24317268:1464614998013"/>
+<exit_state name="NO" target="Element@801109216:1625227057448"/>
+</exit_states>
+</element>
+<element height="46" id="Element@9700810:1464614998013" name="AgTrn_2" type="Flag" width="94" x="851" y="974">
+<exit_states>
+<exit_state name="done" target="Element@15568375:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@22417131:1464614998013" name="MaxInputWrongInput" type="Page Connector" width="164" x="753" y="793">
+<page_connector target="Element@7400704:1398323921478">MaxInputWrongInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@30296617:1464614998013" name="Is Bulk Outage" type="Decision" width="126" x="-115" y="974">
+<exit_states>
+<exit_state name="NO" target="Element@6745747:1464614998013"/>
+<exit_state name="BULK_OUTAGE" target="Element@28905938:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@9879040:1464614998013" name="Play Bulk Outage Prompt" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="183" x="563" y="974">
+<exit_states>
+<exit_state name="option1" target="Element@7341706:1464614998013"/>
+<exit_state name="option2" target="Element@9700810:1464614998013"/>
+<exit_state name="max_nomatch" target="Element@21047877:1464614998013"/>
+<exit_state name="max_noinput" target="Element@21047877:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@9326246:1464614998013" name="IPTV" type="Page Connector" width="75" x="400" y="1288">
+<page_connector target="Element@18808407:1326832702974">IPTV<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@29612007:1464614998013" name="FF_AgtTrn_TemClosed" type="Flag" width="169" x="126" y="704">
+<exit_states>
+<exit_state name="done" target="Element@31247477:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@7341706:1464614998013" name="Product Decision" type="Decision" width="140" x="346" y="1150">
+<exit_states>
+<exit_state name="PSTN" target="Element@12411587:1464614998013"/>
+<exit_state name="EVO" target="Element@27204261:1464614998013"/>
+<exit_state name="IPTV" target="Element@9326246:1464614998013"/>
+<exit_state name="OtherServices" target="Element@13467611:1464614998013"/>
+<exit_state name="BB" target="Element@25505897:1464614998013"/>
+<exit_state name="WLL" target="Element@19745692:1464614998013"/>
+<exit_state name="NetworkOutage" target="Element@12522047:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@6745747:1464614998013" name="PrintSkillGroup" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="129" x="161" y="1065">
+<exit_states>
+<exit_state name="done" target="Element@7341706:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@6339859:1464614998013" name="TR_IsRecordFound_2" type="Action" width="159" x="383" y="13">
+<exit_states>
+<exit_state name="done" target="Element@5043635:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@27324458:1464614998013" name="Agent" type="Page Connector" width="96" x="611" y="735">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@9196052:1464614998013" name="Status_PlayComplaintNumCounter" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="235" x="1102" y="494">
+<exit_states>
+<exit_state name="done" target="Element@6622683:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@227990:1464614998013" name="ComplaintAlreadyRegistered" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="201" x="556" y="493">
+<exit_states>
+<exit_state name="done" target="Element@1816580:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@9927711:1464614998013" name="Decision" type="Page Connector" width="95" x="365" y="727">
+<page_connector target="Element@22224755:1326713272025">Decision<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@7395419:1464614998013" name="TR_IsTOSPOS" type="Action" width="121" x="-117" y="760">
+<exit_states>
+<exit_state name="done" target="Element@30296617:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@13467611:1464614998013" name="OtherServices" type="Page Connector" width="122" x="493" y="1285">
+<page_connector target="Element@20636167:1326832720084">OtherServices<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@31247477:1464614998013" name="Agent" type="Page Connector" width="126" x="143" y="810">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@24474659:1464614998013" name="Status2" type="Flag" width="88" x="869" y="388">
+<exit_states>
+<exit_state name="done" target="Element@1816580:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@17807603:1464614998013" name="Is Checking Status 2" type="Decision" width="155" x="336" y="359">
+<exit_states>
+<exit_state name="YES" target="Element@1167414965:1551584298651"/>
+<exit_state name="NO" target="Element@6594463:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@12411587:1464614998013" name="PSTN" type="Page Connector" width="79" x="97" y="1156">
+<page_connector target="Element@27596826:1326832645240">PSTN<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@28905938:1464614998013" name="TR_BulkOutage" type="Action" width="165" x="138" y="974">
+<exit_states>
+<exit_state name="done" target="Element@9879040:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@9668295:1464614998013" name="TR_IsTOSPOS_2" type="Action" width="132" x="141" y="459">
+<exit_states>
+<exit_state name="done" target="Element@5754:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@5043635:1464614998013" name="WS_AgTrn_RecNotFound" type="Flag" width="183" x="695" y="13">
+<exit_states>
+<exit_state name="done" target="Element@4650724:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@6622683:1464614998013" name="Status_MaxReplayReached" type="Decision" width="189" x="1118" y="593">
+<exit_states>
+<exit_state name="YES" target="Element@23009858:1464614998013"/>
+<exit_state name="NO" target="Element@24823512:1531902424575"/>
+</exit_states>
+</element>
+<element height="46" id="Element@19745692:1464614998013" name="WLL" type="Page Connector" width="80" x="292" y="1287">
+<page_connector target="Element@21097899:1326832679052">WLL<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@5754:1464614998013" name="Temp Closed" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="120" x="149" y="608">
+<exit_states>
+<exit_state name="done" target="Element@29612007:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@24317268:1464614998013" name="Is Checking Status" type="Decision" width="146" x="583" y="388">
+<exit_states>
+<exit_state name="YES" target="Element@24474659:1464614998013"/>
+<exit_state name="NO" target="Element@227990:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@6594463:1464614998013" name="Is TOS POS" type="Decision" width="112" x="-114" y="458">
+<exit_states>
+<exit_state name="Inactive" target="Element@9668295:1464614998013"/>
+<exit_state name="TOS_POS" target="Element@9668295:1464614998013"/>
+<exit_state name="Active" target="Element@7395419:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@16458781:1464614998013" name="TR_IsRecordFound" type="Action" width="148" x="826" y="138">
+<exit_states>
+<exit_state name="done" target="Element@901012420:1639479309147"/>
+</exit_states>
+</element>
+<element height="46" id="Element@23009858:1464614998013" name="Good Bye" type="Page Connector" width="101" x="1161" y="748">
+<page_connector target="Element@15828870:1326711372571">Good Bye<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@20848860:1464614998013" name="WS Response Print" type="Action" width="148" x="389" y="139">
+<exit_states>
+<exit_state name="done" target="Element@744079912:1578386691928"/>
+</exit_states>
+</element>
+<element height="46" id="Element@27204261:1464614998013" name="EVO" type="Page Connector" width="75" x="183" y="1284">
+<page_connector target="Element@6453774:1326832690865">EVO<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@25505897:1464614998013" name="Broadband" type="Page Connector" width="108" x="92" y="1230">
+<page_connector target="Element@10780239:1326832660818">Broadband<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@21047877:1464614998013" name="MiscWrgInput_3" type="Flag" width="136" x="581" y="1156">
+<exit_states>
+<exit_state name="done" target="Element@10289773:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@15568375:1464614998013" name="Agent" type="Page Connector" width="96" x="848" y="1079">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@12522047:1464614998013" name="Agent" type="Page Connector" width="82" x="614" y="1236">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@4650724:1464614998013" name="Agent" type="Page Connector" width="82" x="958" y="13">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1816580:1464614998013" name="PlayComplaintNumber" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="172" x="824" y="494">
+<exit_states>
+<exit_state name="done" target="Element@9196052:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@27390203:1519976147382" name="Session Variables" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="164" x="-126" y="13">
+<exit_states>
+<exit_state name="done" target="Element@1032370750:1573565952064"/>
+</exit_states>
+</element>
+<element height="46" id="Element@24823512:1531902424575" name="Decision_again" src="com.audium.server.voiceElement.menu.MFoundation3OptionMenu" type="Voice Element" width="144" x="838" y="593">
+<exit_states>
+<exit_state name="option1" target="Element@1816580:1464614998013"/>
+<exit_state name="option2" target="Element@593013285:1628691942614"/>
+<exit_state name="option3" target="Element@27324458:1464614998013"/>
+<exit_state name="max_nomatch" target="Element@22417131:1464614998013"/>
+<exit_state name="max_noinput" target="Element@1295421772:1560245665027"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1167414965:1551584298651" name="NoComplaintRegistered" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="177" x="324" y="598">
+<exit_states>
+<exit_state name="done" target="Element@9927711:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1295421772:1560245665027" name="MaxNoInput" type="Page Connector" width="116" x="950" y="731">
+<page_connector target="Element@1680893598:1557672981671">MaxNoInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1032370750:1573565952064" name="WS_GetNumberDeatils" type="Action" width="197" x="-142" y="139">
+<exit_states>
+<exit_state name="done" target="Element@618093221:1639995264333"/>
+</exit_states>
+</element>
+<element height="46" id="Element@744079912:1578386691928" name="IsRecordFound" type="Decision" width="135" x="592" y="139">
+<exit_states>
+<exit_state name="INVALID_SERVICE_ID" target="Element@6339859:1464614998013"/>
+<exit_state name="INVALID_PRODUCT_CODE" target="Element@6339859:1464614998013"/>
+<exit_state name="INVALID_COMPLAINT_TYPE" target="Element@6339859:1464614998013"/>
+<exit_state name="WS_TIMEOUT" target="Element@6339859:1464614998013"/>
+<exit_state name="INTERNAL_ERROR" target="Element@6339859:1464614998013"/>
+<exit_state name="INACTIVE_SERVICE_ID" target="Element@6339859:1464614998013"/>
+<exit_state name="NOT_FOUND" target="Element@6339859:1464614998013"/>
+<exit_state name="RECORD_FOUND" target="Element@16458781:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@801109216:1625227057448" name="smpFlag" type="Decision" width="112" x="356" y="237">
+<exit_states>
+<exit_state name="ON" target="Element@1668148318:1625490927858"/>
+<exit_state name="OFF" target="Element@17807603:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1668148318:1625490927858" name="Reg_Complaint" type="Page Connector" width="131" x="157" y="262">
+<page_connector target="Element@20607963:1326919235159">Reg_Complaint<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@593013285:1628691942614" name="Copy_2_of_smpFlag" type="Decision" width="155" x="567" y="654">
+<exit_states>
+<exit_state name="ON" target="Element@769530668:1628692374204"/>
+<exit_state name="OFF" target="Element@9927711:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@769530668:1628692374204" name="MainMenuOneNumber" type="Page Connector" width="174" x="557" y="569">
+<page_connector target="Element@30444207:1508227276170">MainMenuOneNumber<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@901012420:1639479309147" name="smpFlag2" type="Decision" width="101" x="635" y="194">
+<exit_states>
+<exit_state name="ON" target="Element@651772734:1639479954895"/>
+<exit_state name="OFF" target="Element@680241:1464614998013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@651772734:1639479954895" name="P1218_GetNumberDetail_Action_PendingSRWS" type="Action" width="297" x="1002" y="170">
+<exit_states>
+<exit_state name="done" target="Element@1400810610:1639480019604"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1400810610:1639480019604" name="P1218_GetNumberDetail_Decision_IsCompExist" type="Decision" width="297" x="807" y="249">
+<exit_states>
+<exit_state name="No" target="Element@801109216:1625227057448"/>
+<exit_state name="Yes" target="Element@1474651433:1639480442041"/>
+<exit_state name="API Down" target="Element@756048158:1639480328613"/>
+</exit_states>
+</element>
+<element height="46" id="Element@756048158:1639480328613" name="OldFlow" type="Page Connector" width="94" x="802" y="308">
+<page_connector target="Element@921965252:1634034449495">OldFlow<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1672826428:1639480442041" name="MaxInputWrongInput" type="Page Connector" width="164" x="1465" y="373">
+<page_connector target="Element@7400704:1398323921478">MaxInputWrongInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@337868872:1639480442041" name="MaxNoInput" type="Page Connector" width="116" x="1457" y="200">
+<page_connector target="Element@1680893598:1557672981671">MaxNoInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@307466343:1639480442041" name="Copy_of_SetPC" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="130" x="1212" y="330">
+<exit_states>
+<exit_state name="done" target="Element@741172119:1639480442041"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1474651433:1639480442041" name="Decision_Other_SRs" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="153" x="1205" y="243">
+<exit_states>
+<exit_state name="option1" target="Element@1385202880:1639480586349"/>
+<exit_state name="option2" target="Element@307466343:1639480442041"/>
+<exit_state name="max_nomatch" target="Element@1672826428:1639480442041"/>
+<exit_state name="max_noinput" target="Element@337868872:1639480442041"/>
+</exit_states>
+</element>
+<element height="46" id="Element@741172119:1639480442041" name="Agent" type="Page Connector" width="82" x="1259" y="417">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1385202880:1639480586349" name="P1218_SMP_TransferToOneNumber3" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="244" x="1485" y="263">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@618093221:1639995264333" name="P1218_GetNumberDetail_Dec_Outage" type="Decision" width="247" x="97" y="13">
+<exit_states>
+<exit_state name="ServiceDown" target="Element@6339859:1464614998013"/>
+<exit_state name="ServiceUp" target="Element@611865797:1640075929288"/>
+</exit_states>
+</element>
+<element height="46" id="Element@611865797:1640075929288" name="SetComplaintNumber" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="166" x="137" y="139">
+<exit_states>
+<exit_state name="done" target="Element@20848860:1464614998013"/>
+</exit_states>
+</element>
+</page>

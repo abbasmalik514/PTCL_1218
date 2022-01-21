@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--File CheckNEOutage.wsdl, application CheckNEOutage--><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.ptcl.net.pk/CheckNEOutage/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CheckNEOutage" targetNamespace="http://www.ptcl.net.pk/CheckNEOutage/">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="CheckNEOutage_InlineSchema1.xsd" />
+        <binding hasEncoding="false" imported="true" name="CheckNEOutageSOAP" originalBindingStyle="document" />
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    
+          <xsd:schema xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" targetNamespace="http://www.ptcl.net.pk/CheckNEOutage/">
+<xsd:import schemaLocation="840917303" />
+    </xsd:schema>
+    </wsdl:types>
+  <wsdl:types>
+  	<xsd:schema>
+  		<xsd:import namespace="http://www.ptcl.net.pk/CheckNEOutage/" schemaLocation="840917303">
+  		</xsd:import></xsd:schema></wsdl:types>
+  <wsdl:message name="NEOutageRequest">
+    <wsdl:part element="tns:NEOutage" name="parameters" />
+  </wsdl:message>
+  <wsdl:message name="NEOutageResponse">
+    <wsdl:part element="tns:NEOutageResponse" name="parameters" />
+  </wsdl:message>
+  <wsdl:portType name="CheckNEOutage">
+    <wsdl:operation name="NEOutage">
+      <wsdl:input message="tns:NEOutageRequest" />
+      <wsdl:output message="tns:NEOutageResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CheckNEOutageSOAP" type="tns:CheckNEOutage">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NEOutage">
+      <soap:operation soapAction="http://www.ptcl.net.pk/CheckNEOutage/NEOutage" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CheckNEOutage">
+    <wsdl:port binding="tns:CheckNEOutageSOAP" name="CheckNEOutageSOAP">
+      <soap:address location="http://172.16.113.156:7951/NEOutage" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

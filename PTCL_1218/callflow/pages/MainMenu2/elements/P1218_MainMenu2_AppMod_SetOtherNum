@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1478994561:1621611003020" name="P1218_MainMenu2_AppMod_SetOtherNum" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="After" name="OTHER_NUMBER">{Data.Session.SN}</data>
+<data create_when="After" name="SERVICE_NO">{Data.Session.SN}</data>
+<data create_when="After" name="MakeServiceNo">{Data.Session.SN}</data>
+<data create_when="After" name="CF_SERVICE_NO">{Data.Session.SN}</data>
+</session_data>
+</config>
+</action_element>

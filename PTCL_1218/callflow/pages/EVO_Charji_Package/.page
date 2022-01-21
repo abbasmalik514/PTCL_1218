@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1687756288:1576858898497" name="EVO_Charji_Package" version="6.0.1">
+<element height="46" id="Element@541154220:1576859118552" name="EVO_Charji_Package" type="Page Entry" width="157" x="233" y="54">
+<exit_states>
+<exit_state name="next" target="Element@157023031:1576859927780"/>
+</exit_states>
+</element>
+<element height="46" id="Element@866521255:1576859927780" name="PackageSubscriptionFailed" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="226" x="-227" y="1101">
+<exit_states>
+<exit_state name="done" target="Element@2140400888:1576860001366"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1998868524:1576859927780" name="WS_Package_Sub_Resp" type="Decision" width="171" x="-579" y="1063">
+<exit_states>
+<exit_state name="Success" target="Element@1896592847:1576859927780"/>
+<exit_state name="Failed" target="Element@866521255:1576859927780"/>
+</exit_states>
+</element>
+<element height="46" id="Element@157023031:1576859927780" name="PackageDevice" type="Decision" width="130" x="251" y="178">
+<exit_states>
+<exit_state name="EVO" target="Element@397876805:1576859927780"/>
+<exit_state name="Charji" target="Element@1976163501:1576859927780"/>
+</exit_states>
+</element>
+<element height="46" id="Element@926277424:1576859927780" name="MaxNoInput" type="Page Connector" width="116" x="-206" y="1011">
+<page_connector target="Element@1680893598:1557672981671">MaxNoInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1976163501:1576859927780" name="Package_Charji_Type" type="Decision" width="161" x="-74" y="312">
+<exit_states>
+<exit_state name="PrePaid" target="Element@936207108:1576859927780"/>
+<exit_state name="PostPaid" target="Element@220182587:1576859927780"/>
+</exit_states>
+</element>
+<element height="46" id="Element@220182587:1576859927780" name="PackageCharjiPostpaidMenu" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="253" x="235" y="438">
+<exit_states>
+<exit_state name="option1" target="Element@371737189:1576859927780"/>
+<exit_state name="option2" target="Element@550699746:1576860299766"/>
+<exit_state name="max_nomatch" target="Element@2097949899:1576860125715"/>
+<exit_state name="max_noinput" target="Element@224598594:1576860155184"/>
+</exit_states>
+</element>
+<element height="46" id="Element@487254205:1576859927780" name="MaxInputWrongInput" type="Page Connector" width="164" x="-227" y="930">
+<page_connector target="Element@7400704:1398323921478">MaxInputWrongInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1001201891:1576859927780" name="WSPackageSub" type="Action" width="178" x="-579" y="949">
+<exit_states>
+<exit_state name="done" target="Element@1998868524:1576859927780"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1202397075:1576859927780" name="Package_Sub_Failed" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="190" x="606" y="761">
+<exit_states>
+<exit_state name="done" target="Element@550699746:1576860299766"/>
+</exit_states>
+</element>
+<element height="46" id="Element@757006400:1576859927780" name="WS_Package_Sub_Resp1" type="Decision" width="180" x="289" y="646">
+<exit_states>
+<exit_state name="Success" target="Element@835708065:1576859927780"/>
+<exit_state name="Failed" target="Element@1202397075:1576859927780"/>
+</exit_states>
+</element>
+<element height="46" id="Element@936207108:1576859927780" name="PackageCharjiPrepaidBalance" type="Decision" width="215" x="-361" y="455">
+<exit_states>
+<exit_state name="Balance Low" target="Element@2019039220:1576859927780"/>
+<exit_state name="Balance Available" target="Element@1536122478:1576859927780"/>
+<exit_state name="less then MRC" target="Element@2019039220:1576859927780"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1896592847:1576859927780" name="PackageSubscribed" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="188" x="-579" y="1149">
+<exit_states>
+<exit_state name="done" target="Element@670525404:1576860049196"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1313439972:1576859927780" name="Package_Charji_Prepaid_Menu" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="211" x="-580" y="833">
+<exit_states>
+<exit_state name="option1" target="Element@1001201891:1576859927780"/>
+<exit_state name="option2" target="Element@1305228978:1576859982319"/>
+<exit_state name="max_nomatch" target="Element@487254205:1576859927780"/>
+<exit_state name="max_noinput" target="Element@926277424:1576859927780"/>
+</exit_states>
+</element>
+<element height="46" id="Element@494415928:1576859927780" name="Good Bye" type="Page Connector" width="101" x="235" y="905">
+<page_connector target="Element@15828870:1326711372571">Good Bye<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1536122478:1576859927780" name="Package_Charji_Validity" type="Decision" width="174" x="-579" y="578">
+<exit_states>
+<exit_state name="Yes" target="Element@1313439972:1576859927780"/>
+<exit_state name="No" target="Element@2019039220:1576859927780"/>
+</exit_states>
+</element>
+<element height="46" id="Element@371737189:1576859927780" name="WSPackageSub1" type="Action" width="157" x="294" y="557">
+<exit_states>
+<exit_state name="done" target="Element@757006400:1576859927780"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2019039220:1576859927780" name="CharjiPrepaidNotValid" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="176" x="-227" y="671">
+<exit_states>
+<exit_state name="done" target="Element@1579529945:1576860103454"/>
+</exit_states>
+</element>
+<element height="46" id="Element@835708065:1576859927780" name="Package_Sub_Success" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="204" x="235" y="776">
+<exit_states>
+<exit_state name="done" target="Element@494415928:1576859927780"/>
+</exit_states>
+</element>
+<element height="46" id="Element@397876805:1576859927780" name="Package_EVO_Type" type="Decision" width="152" x="1544" y="312">
+<exit_states>
+<exit_state name="PrePaid" target="Element@273089064:1577852711611"/>
+<exit_state name="PostPaid" target="Element@599978226:1577859302013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1305228978:1576859982319" name="Agent" type="Page Connector" width="82" x="-227" y="829">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2140400888:1576860001366" name="Agent" type="Page Connector" width="82" x="-227" y="1206">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@670525404:1576860049196" name="Good Bye" type="Page Connector" width="101" x="-579" y="1240">
+<page_connector target="Element@15828870:1326711372571">Good Bye<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1579529945:1576860103454" name="Good Bye" type="Page Connector" width="101" x="-227" y="757">
+<page_connector target="Element@15828870:1326711372571">Good Bye<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2097949899:1576860125715" name="MaxInputWrongInput" type="Page Connector" width="164" x="617" y="435">
+<page_connector target="Element@7400704:1398323921478">MaxInputWrongInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@224598594:1576860155184" name="MaxNoInput" type="Page Connector" width="116" x="617" y="528">
+<page_connector target="Element@1680893598:1557672981671">MaxNoInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@550699746:1576860299766" name="Agent" type="Page Connector" width="82" x="617" y="631">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@411586822:1577852711611" name="Good Bye" type="Page Connector" width="101" x="1156" y="1139">
+<page_connector target="Element@15828870:1326711372571">Good Bye<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@447220426:1577852711611" name="MaxInputWrongInput" type="Page Connector" width="164" x="1443" y="702">
+<page_connector target="Element@7400704:1398323921478">MaxInputWrongInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@533735135:1577852711611" name="PackageEVOPrepaidBalance" skipped="true" type="Decision" width="197" x="1569" y="474">
+<exit_states>
+<exit_state name="Balance Low" target="Element@653854929:1577852711611"/>
+<exit_state name="Balance Available" target="Element@273089064:1577852711611"/>
+</exit_states>
+</element>
+<element height="46" id="Element@954873379:1577852711611" name="PackageSubscribed2" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="201" x="1098" y="1011">
+<exit_states>
+<exit_state name="done" target="Element@411586822:1577852711611"/>
+</exit_states>
+</element>
+<element height="46" id="Element@171648400:1577852711611" name="WS_Package_Sub3" type="Action" width="164" x="1213" y="796">
+<exit_states>
+<exit_state name="done" target="Element@824120879:1577852711611"/>
+</exit_states>
+</element>
+<element height="46" id="Element@273089064:1577852711611" name="EVOPrepaidPackageValidity" type="Decision" width="195" x="1202" y="474">
+<exit_states>
+<exit_state name="Yes" target="Element@418233338:1577852711611"/>
+<exit_state name="No" target="Element@653854929:1577852711611"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1392609979:1577852711611" name="MaxNoInput" type="Page Connector" width="116" x="1461" y="795">
+<page_connector target="Element@1680893598:1557672981671">MaxNoInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@665970004:1577852711611" name="Good Bye" type="Page Connector" width="101" x="1641" y="686">
+<page_connector target="Element@15828870:1326711372571">Good Bye<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@824120879:1577852711611" name="WS_Package_Sub_Resp3" type="Decision" width="177" x="1210" y="922">
+<exit_states>
+<exit_state name="Success" target="Element@954873379:1577852711611"/>
+<exit_state name="Failed" target="Element@1877573850:1577852711611"/>
+</exit_states>
+</element>
+<element height="46" id="Element@653854929:1577852711611" name="EVOPrepaidNotValid" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="216" x="1573" y="591">
+<exit_states>
+<exit_state name="done" target="Element@665970004:1577852711611"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1877573850:1577852711611" name="PackageSubscriptionFailed2" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="197" x="1441" y="1002">
+<exit_states>
+<exit_state name="done" target="Element@240935282:1577852711611"/>
+</exit_states>
+</element>
+<element height="46" id="Element@240935282:1577852711611" name="Agent" type="Page Connector" width="82" x="1499" y="1112">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@418233338:1577852711611" name="EVOPrepaidMenuPackage" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="187" x="1200" y="611">
+<exit_states>
+<exit_state name="option1" target="Element@171648400:1577852711611"/>
+<exit_state name="option2" target="Element@702210440:1577854168746"/>
+<exit_state name="max_nomatch" target="Element@447220426:1577852711611"/>
+<exit_state name="max_noinput" target="Element@1392609979:1577852711611"/>
+</exit_states>
+</element>
+<element height="46" id="Element@702210440:1577854168746" name="Agent" type="Page Connector" width="82" x="1474" y="623">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1086835184:1577859302013" name="PackageSubscribedPostpaid2" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="204" x="1876" y="811">
+<exit_states>
+<exit_state name="done" target="Element@1646549718:1577859302013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1679548498:1577859302013" name="MaxNoInput" type="Page Connector" width="116" x="2268" y="506">
+<page_connector target="Element@1680893598:1557672981671">MaxNoInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@401755616:1577859302013" name="WSPackageSubcriptionEVOPostpaid" type="Action" width="240" x="1876" y="592">
+<exit_states>
+<exit_state name="done" target="Element@618051944:1577859302013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1398321717:1577859302013" name="MaxInputWrongInput" type="Page Connector" width="164" x="2268" y="439">
+<page_connector target="Element@7400704:1398323921478">MaxInputWrongInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@220622269:1577859302013" name="PackageSubscriptionFailedPostpaid2" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="243" x="2268" y="796">
+<exit_states>
+<exit_state name="done" target="Element@1441700361:1577859302013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1646549718:1577859302013" name="Good Bye" type="Page Connector" width="101" x="1876" y="940">
+<page_connector target="Element@15828870:1326711372571">Good Bye<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1441700361:1577859302013" name="Agent" type="Page Connector" width="82" x="2268" y="575">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@618051944:1577859302013" name="WSPackageSubsciptionCheckEVOPostpaid" type="Decision" width="274" x="1876" y="681">
+<exit_states>
+<exit_state name="Success" target="Element@1086835184:1577859302013"/>
+<exit_state name="Failed" target="Element@220622269:1577859302013"/>
+</exit_states>
+</element>
+<element height="46" id="Element@599978226:1577859302013" name="PackageEVOPostpaidMenu" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="193" x="1876" y="474">
+<exit_states>
+<exit_state name="option1" target="Element@401755616:1577859302013"/>
+<exit_state name="option2" target="Element@1441700361:1577859302013"/>
+<exit_state name="max_nomatch" target="Element@1398321717:1577859302013"/>
+<exit_state name="max_noinput" target="Element@1679548498:1577859302013"/>
+</exit_states>
+</element>
+</page>

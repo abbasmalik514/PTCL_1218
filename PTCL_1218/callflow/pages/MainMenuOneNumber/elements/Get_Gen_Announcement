@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@44149003:1560865757280" name="Get_Gen_Announcement" version="6.0.1">
+<config>
+<source type="Class">com.ef.clients.ptcl.cbrupgrade.GetGeneralAnu</source>
+</config>
+</action>

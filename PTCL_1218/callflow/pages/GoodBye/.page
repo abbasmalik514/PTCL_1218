@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@9462145:1326711372571" name="GoodBye" version="6.0.1">
+<element height="46" id="Element@15828870:1326711372571" name="Good Bye" type="Page Entry" width="108" x="306" y="27">
+<exit_states>
+<exit_state name="next" target="Element@21664678:1326711415885"/>
+</exit_states>
+</element>
+<element height="46" id="Element@21664678:1326711415885" name="Thank you And Allah Hafiz" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="191" x="264" y="140">
+<exit_states>
+<exit_state name="done" target="Element@19115076:1326711415885"/>
+</exit_states>
+</element>
+<element height="46" id="Element@19115076:1326711415885" name="Back To ICM End Call" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="172" x="274" y="249">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+</page>

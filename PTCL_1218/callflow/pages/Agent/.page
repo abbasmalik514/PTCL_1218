@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@13265827:1326711395946" name="Agent" version="6.0.1">
+<element height="46" id="Element@23110385:1326711395946" name="Agent" type="Page Entry" width="82" x="102" y="29">
+<exit_states>
+<exit_state name="next" target="Element@4538420:1433947989796"/>
+</exit_states>
+</element>
+<element height="46" id="Element@31254441:1331244421180" name="Transfer To Agent" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="145" x="856" y="656">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@617899:1433947935890" name="QA" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="95" x="293" y="182">
+<exit_states>
+<exit_state name="done" target="Element@12075107:1503393998191"/>
+</exit_states>
+</element>
+<element height="46" id="Element@8001039:1433947989796" name="IVR End Time" type="Action" width="120" x="280" y="121">
+<exit_states>
+<exit_state name="done" target="Element@617899:1433947935890"/>
+</exit_states>
+</element>
+<element height="46" id="Element@4538420:1433947989796" name="TR_Finalize" type="Action" width="108" x="286" y="29">
+<exit_states>
+<exit_state name="done" target="Element@8001039:1433947989796"/>
+</exit_states>
+</element>
+<element height="46" id="Element@27281962:1433948018233" name="AgentGreeting" type="Page Entry" width="127" x="506" y="29">
+<exit_states>
+<exit_state name="next" target="Element@4538420:1433947989796"/>
+</exit_states>
+</element>
+<element height="46" id="Element@24230640:1462215790993" name="Hotevent_01" type="Hotevent" width="116" x="870" y="329">
+<exit_states>
+<exit_state name="goto" target="Element@1757342005:1583833486647"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2534818:1469789009040" name="Variables_To_ICM" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="143" x="857" y="570">
+<exit_states>
+<exit_state name="done" target="Element@31254441:1331244421180"/>
+</exit_states>
+</element>
+<element height="46" id="Element@22482396:1477558867401" name="CustomerName" type="Action" width="134" x="76" y="570">
+<exit_states>
+<exit_state name="done" target="Element@5183863:1477558867401"/>
+</exit_states>
+</element>
+<element height="46" id="Element@5183863:1477558867401" name="Agent_Transfer_With_Name" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="197" x="45" y="656">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@4929785:1499691034763" name="Hotevent_02" type="Hotevent" width="116" x="870" y="427">
+<exit_states>
+<exit_state name="goto" target="Element@1757342005:1583833486647"/>
+</exit_states>
+</element>
+<element height="46" id="Element@12075107:1503393998191" name="SINDHI_OTHER" type="Decision" width="131" x="275" y="266">
+<exit_states>
+<exit_state name="SN" target="Element@9379076:1503994186080"/>
+<exit_state name="other" target="Element@1757342005:1583833486647"/>
+</exit_states>
+</element>
+<element height="46" id="Element@9379076:1503994186080" name="Check_Wireline_Wireless" type="Decision" width="179" x="480" y="121">
+<exit_states>
+<exit_state name="Wireless" target="Element@29283096:1503999343637"/>
+<exit_state name="Wireline" target="Element@18155000:1503999343637"/>
+</exit_states>
+</element>
+<element height="46" id="Element@29283096:1503999343637" name="Set_Sindhi_wireless_SG" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="169" x="485" y="266">
+<exit_states>
+<exit_state name="done" target="Element@1757342005:1583833486647"/>
+</exit_states>
+</element>
+<element height="46" id="Element@18155000:1503999343637" name="Set_Sindhi_wireline_SG" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="169" x="844" y="266">
+<exit_states>
+<exit_state name="done" target="Element@1757342005:1583833486647"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1490908063:1569678033058" name="Set_CBR_SG" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="113" x="513" y="570">
+<exit_states>
+<exit_state name="done" target="Element@2534818:1469789009040"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1757342005:1583833486647" name="CheckCBRListSG" type="Decision" width="137" x="501" y="389">
+<exit_states>
+<exit_state name="No" target="Element@2534818:1469789009040"/>
+<exit_state name="SetCBR_SG" target="Element@1043189308:1583841194616"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1059655523:1583841080475" name="Set SG" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="173" x="57" y="489">
+<exit_states>
+<exit_state name="done" target="Element@22482396:1477558867401"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1043189308:1583841194616" name="CheckSpecialSG" type="Decision" width="134" x="273" y="489">
+<exit_states>
+<exit_state name="NTP" target="Element@845164861:1583841391897"/>
+<exit_state name="Motive" target="Element@1059655523:1583841080475"/>
+<exit_state name="Other" target="Element@1490908063:1569678033058"/>
+<exit_state name="v5" target="Element@1049838990:1583846290626"/>
+</exit_states>
+</element>
+<element height="46" id="Element@845164861:1583841391897" name="CheckSG" type="Decision" width="107" x="287" y="656">
+<exit_states>
+<exit_state name="YES" target="Element@1490908063:1569678033058"/>
+<exit_state name="No" target="Element@2534818:1469789009040"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1049838990:1583846290626" name="Motive Variable 5" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="194" x="473" y="489">
+<comment><![CDATA[Setting IVR time value to CBR list. This will be visible in call variable 5]]></comment>
+<exit_states>
+<exit_state name="done" target="Element@2534818:1469789009040"/>
+</exit_states>
+</element>
+<element height="46" id="Element@577931823:1627627010860" name="SMP_Agent" type="Page Entry" width="111" x="1082" y="459">
+<exit_states>
+<exit_state name="next" target="Element@1937028273:1628601162221"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1937028273:1628601162221" name="TR_Finalize_SMP" type="Action" width="137" x="885" y="493">
+<exit_states>
+<exit_state name="done" target="Element@2534818:1469789009040"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@400621604:1576859326144" name="WS_Bucket_Activation_Resp2" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="WS Bucket Activation Check" default_exit_state="Failed">
+        <exit_state name="Success" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="BucketActivationCode" />
+                </data>
+                <constant_string value="0" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

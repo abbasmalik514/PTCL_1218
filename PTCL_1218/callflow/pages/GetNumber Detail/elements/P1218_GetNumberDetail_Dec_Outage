@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@618093221:1639995264333" name="P1218_GetNumberDetail_Dec_Outage" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="P1218_GetNumberDetail_Dec_Outage" default_exit_state="ServiceUp">
+        <exit_state name="ServiceDown" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="serStatus" />
+                </data>
+                <constant_string value="-1" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

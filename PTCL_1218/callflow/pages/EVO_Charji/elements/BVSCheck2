@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@207547212:1576858407606" name="BVSCheck2" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="BVS Check" default_exit_state="Verified">
+        <exit_state name="Not Verified" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="BVSCheck" />
+                </data>
+                <constant_string value="Not Available" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

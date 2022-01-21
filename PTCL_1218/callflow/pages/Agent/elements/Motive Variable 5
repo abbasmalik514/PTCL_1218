@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1049838990:1583846290626" name="Motive Variable 5" version="6.0.1">
+<config>
+<log>
+<data create_when="" name="IVR_TIME">{Data.Session.IVRTIME}</data>
+</log>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="After" name="IVR_TIME">{Data.Session.CBR_SG}</data>
+</session_data>
+</config>
+</action_element>

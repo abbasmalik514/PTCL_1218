@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@26305968:1463484397476" name="Check_Tag_Status_2" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check_Tag_Status_2" default_exit_state="No">
+        <exit_state name="MAL" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="IS_MAL" />
+                </data>
+                <constant_string value="YES" />
+            </string>
+        </exit_state>
+        <exit_state name="REP" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="IS_REP" />
+                </data>
+                <constant_string value="YES" />
+            </string>
+        </exit_state>
+        <exit_state name="REP_1218" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="Repeated_1218" />
+                </data>
+                <constant_string value="YES" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

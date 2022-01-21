@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@1800574651:1641894153883" name="WSPackageChange" version="6.0.1">
+<config>
+<source type="Class">com.ef.clients.ptcl.evo_charji.PackageChange</source>
+</config>
+</action>

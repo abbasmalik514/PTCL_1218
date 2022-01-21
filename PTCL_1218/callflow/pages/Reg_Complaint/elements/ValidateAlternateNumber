@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@21369324:1327909601037" name="ValidateAlternateNumber" version="6.0.1">
+<config>
+<source type="Class">com.ef.clients.ptcl.ValidateAlternateNumber</source>
+</config>
+</decision>

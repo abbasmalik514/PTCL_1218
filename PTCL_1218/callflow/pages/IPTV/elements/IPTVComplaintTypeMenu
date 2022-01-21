@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@3062717:1331371202644" name="IPTVComplaintTypeMenu" version="6.0.1">
+<config>
+<settings>
+<setting name="noinput_timeout">5s</setting>
+<setting name="max_noinput_count">3</setting>
+<setting name="max_nomatch_count">3</setting>
+<setting name="confidence_level">0.40</setting>
+<setting name="modal">false</setting>
+<setting name="option1_dtmf">1</setting>
+<setting name="option1_voice"/>
+<setting name="option1_value">I1</setting>
+<setting name="option2_dtmf">2</setting>
+<setting name="option2_voice"/>
+<setting name="option2_value">I41</setting>
+<setting name="option3_dtmf">3</setting>
+<setting name="option3_voice"/>
+<setting name="option3_value">I4</setting>
+<setting name="option4_dtmf">#</setting>
+<setting name="option4_voice"/>
+<setting name="option4_value">ReturnToMainMenu</setting>
+</settings>
+<vxml_properties>
+<data name="termchar"/>
+</vxml_properties>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="stv complaint type menu" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/i_stv_complaint_type.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="nomatch_audio_group">
+<audio_item name="NoMatch" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/WrongInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="stv complaint type menu" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/i_stv_complaint_type.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="nomatch_audio_group">
+<audio_item name="NoMatch" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/WrongInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="stv complaint type menu" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/i_stv_complaint_type.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noinput_audio_group">
+<audio_item name="NoInput" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="stv complaint type menu" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/i_stv_complaint_type.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="noinput_audio_group">
+<audio_item name="NoInput" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/NoInput.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="stv complaint type menu" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/i_stv_complaint_type.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<session_data>
+<data create_when="After" name="COMPLAINT_TYPE">{Data.Element.IPTVComplaintTypeMenu.value}</data>
+</session_data>
+</config>
+</voice_element>

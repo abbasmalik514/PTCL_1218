@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@1514857233:1576858068053" name="Evo_Outage_Product" version="6.0.1">
+<config>
+<source type="Class">com.ef.clients.ptcl.cbrupgrade.GetServiceStatus_Product</source>
+</config>
+</action>

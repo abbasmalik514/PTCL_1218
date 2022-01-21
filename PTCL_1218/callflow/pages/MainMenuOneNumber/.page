@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@5094883:1508227273514" name="MainMenuOneNumber" version="6.0.1">
+<element height="46" id="Element@21332891:1508227276186" name="MaxInputWrongInput" type="Page Connector" width="164" x="747" y="438">
+<page_connector target="Element@7400704:1398323921478">MaxInputWrongInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@4254769:1508227276170" name="MainMenu_OneNumber" src="com.audium.server.voiceElement.menu.MFoundation8OptionMenu" type="Voice Element" width="179" x="314" y="438">
+<exit_states>
+<exit_state name="option1" target="Element@29676556:1508228343617"/>
+<exit_state name="option2" target="Element@29676556:1508228343617"/>
+<exit_state name="option3" target="Element@29676556:1508228343617"/>
+<exit_state name="option4" target="Element@1997566:1508228342367"/>
+<exit_state name="option5" target="Element@29676556:1508228343617"/>
+<exit_state name="option6" target="Element@1997566:1508228342367"/>
+<exit_state name="option7" target="Element@29676556:1508228343617"/>
+<exit_state name="option8" target="Element@16249947:1508227276186"/>
+<exit_state name="max_nomatch" target="Element@21332891:1508227276186"/>
+<exit_state name="max_noinput" target="Element@1848422947:1557673136430"/>
+</exit_states>
+</element>
+<element height="46" id="Element@16249947:1508227276186" name="TransferToOneNumber" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="173" x="-98" y="573">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@30444207:1508227276170" name="MainMenuOneNumber" type="Page Entry" width="174" x="-98" y="42">
+<exit_states>
+<exit_state name="next" target="Element@2287599:1508249267908"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1997566:1508228342367" name="IsWirelessSpecial" type="Page Connector" width="154" x="326" y="573">
+<page_connector target="Element@23465655:1508228357446">IsWirelessSpecial<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@29676556:1508228343617" name="IsWirelineSpecial" type="Page Connector" width="154" x="-88" y="438">
+<page_connector target="Element@27185636:1508228384493">IsWirelineSpecial<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2287599:1508249267908" name="GetCallerStatus_1218" type="Action" width="159" x="236" y="42">
+<comment><![CDATA[Do not change the node name as it is in use for get caller status logic]]></comment>
+<exit_states>
+<exit_state name="done" target="Element@28755811:1509530713052"/>
+</exit_states>
+</element>
+<element height="46" id="Element@28755811:1509530713052" name="Check_Repeated_1218" type="Decision" width="166" x="232" y="201">
+<exit_states>
+<exit_state name="No" target="Element@44149003:1560865757280"/>
+<exit_state name="RepeatedCaller" target="Element@15369901:1509531180935"/>
+</exit_states>
+</element>
+<element height="46" id="Element@644015:1509530713036" name="Agent" type="Page Connector" width="96" x="-59" y="331">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@15369901:1509531180935" name="P1218_MainMenuOneNumber_Audio_SetRepeatedSG" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="331" x="-176" y="201">
+<exit_states>
+<exit_state name="done" target="Element@644015:1509530713036"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1848422947:1557673136430" name="MaxNoInput" type="Page Connector" width="116" x="771" y="573">
+<page_connector target="Element@1680893598:1557672981671">MaxNoInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@44149003:1560865757280" name="Get_Gen_Announcement" type="Action" width="182" x="551" y="42">
+<exit_states>
+<exit_state name="done" target="Element@6311139:1560865865249"/>
+</exit_states>
+</element>
+<element height="46" id="Element@6311139:1560865865249" name="Is_Announcement_Found" type="Decision" width="185" x="549" y="205">
+<exit_states>
+<exit_state name="Yes" target="Element@471507829:1560865956188"/>
+<exit_state name="No" target="Element@1022938366:1626684819359"/>
+</exit_states>
+</element>
+<element height="46" id="Element@471507829:1560865956188" name="P1218_MainMenuOneNumber_Audio_PlayGenAnu" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="317" x="681" y="331">
+<exit_states>
+<exit_state name="done" target="Element@1022938366:1626684819359"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1022938366:1626684819359" name="P1218_MainMenuOneNumber_Decision_SmpFlag" type="Decision" width="311" x="248" y="331">
+<exit_states>
+<exit_state name="ON" target="Element@29676556:1508228343617"/>
+<exit_state name="OFF" target="Element@4254769:1508227276170"/>
+</exit_states>
+</element>
+<element height="46" id="Element@691329701:1640070928869" name="Copy_of_MainMenuOneNumber" type="Page Entry" width="223" x="57" y="272">
+<exit_states>
+<exit_state name="next" target="Element@1022938366:1626684819359"/>
+</exit_states>
+</element>
+</page>

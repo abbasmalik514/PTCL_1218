@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@25546293:1326832645240" name="PSTN" version="6.0.1">
+<element height="46" id="Element@27596826:1326832645240" name="PSTN" type="Page Entry" width="80" x="28" y="35">
+<exit_states>
+<exit_state name="next" target="Element@28757616:1447140648574"/>
+</exit_states>
+</element>
+<element height="46" id="Element@28097030:1326919544622" name="Reg_Complaint" type="Page Connector" width="131" x="223" y="331">
+<page_connector target="Element@20607963:1326919235159">Reg_Complaint<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@5155943:1326919626156" name="MaxInputWrongInput" type="Page Connector" width="164" x="607" y="190">
+<page_connector target="Element@7400704:1398323921478">MaxInputWrongInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@17439542:1331367868223" name="ReturnToMM" type="Page Connector" width="122" x="432" y="190">
+<page_connector target="Element@29923710:1331367851692">ReturnToMM<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@16126352:1333140028649" name="TR_ComplaintInvalidPSTN" skipped="true" type="Action" width="189" x="595" y="35">
+<exit_states>
+<exit_state name="done" target="Element@5155943:1326919626156"/>
+</exit_states>
+</element>
+<element height="46" id="Element@9369895:1333143829477" name="TR_ComplaintPSTN" type="Action" width="154" x="213" y="190">
+<exit_states>
+<exit_state name="done" target="Element@28097030:1326919544622"/>
+</exit_states>
+</element>
+<element height="46" id="Element@29717453:1447140599054" name="Agent" type="Page Connector" width="126" x="29" y="190">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@28757616:1447140648574" name="PSTNComplaintTypeMenu" src="com.audium.server.voiceElement.menu.MFoundation6OptionMenu" type="Voice Element" width="192" x="198" y="35">
+<exit_states>
+<exit_state name="option1" target="Element@9369895:1333143829477"/>
+<exit_state name="option2" target="Element@9369895:1333143829477"/>
+<exit_state name="option3" target="Element@9369895:1333143829477"/>
+<exit_state name="option4" target="Element@9369895:1333143829477"/>
+<exit_state name="option5" target="Element@29717453:1447140599054"/>
+<exit_state name="option6" target="Element@17439542:1331367868223"/>
+<exit_state name="max_nomatch" target="Element@16126352:1333140028649"/>
+<exit_state name="max_noinput" target="Element@707215114:1559155371664">
+<bendpoint>
+<dim1 x="192" y="32"/>
+<dim2 x="-203" y="32"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@707215114:1559155371664" name="MaxNoInput" type="Page Connector" width="174" x="432" y="-64">
+<page_connector target="Element@1680893598:1557672981671">MaxNoInput<config/>
+</page_connector>
+</element>
+</page>

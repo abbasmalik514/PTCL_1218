@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1992088561:1577861556222" name="ProductName" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="ProductName" default_exit_state="Not Available">
+        <exit_state name="EVO" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ProductName" />
+                </data>
+                <constant_string value="EVO" />
+            </string>
+        </exit_state>
+        <exit_state name="Charji" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ProductName" />
+                </data>
+                <constant_string value="Charji" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions
+ xmlns="http://schemas.xmlsoap.org/wsdl/"
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns:xsdLocal1="http://www.siebel.com/xml/Service%20Request%20PTCL%20IPCC"
+ targetNamespace="http://siebel.com/CustomUI"
+ xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:tns="http://siebel.com/CustomUI"
+><types
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/CustomUI"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:import
+ namespace="http://www.siebel.com/xml/Service%20Request%20PTCL%20IPCC"
+></xsd:import
+><xsd:element
+ name="Insert_spcOR_spcUpdate_spcSR_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="Called_spcNumber"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Call_spcStatus"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Object_spcId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal1:ListOfWc_Service_Request_Io"
+></xsd:element
+><xsd:element
+ name="Siebel_spcOperation_spcObject_spcId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SR_spcNumber"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SRXM_ID"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CalledDateTime"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Count"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Rectification_Verification_spcCode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Error_spcCode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Operation"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Error_spcMessage"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="Insert_spcOR_spcUpdate_spcSR_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="Call_spcStatus"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Count"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Error_spcCode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Error_spcMessage"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Object_spcId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Response_spcMessage"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SR_spcNumber"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SRXM_ID"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Siebel_spcOperation_spcObject_spcId"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ xmlns:xsdLocal1="http://www.siebel.com/xml/Service%20Request%20PTCL%20IPCC"
+ targetNamespace="http://www.siebel.com/xml/Service%20Request%20PTCL%20IPCC"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfWc_Service_Request_Io"
+ type="xsdLocal1:ListOfWc_Service_Request_Io"
+></xsd:element
+><xsd:complexType
+ name="ListOfWc_Service_Request_IoTopElmt"
+><xsd:sequence
+><xsd:element
+ name="ListOfWc_Service_Request_Io"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal1:ListOfWc_Service_Request_Io"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfWc_Service_Request_Io"
+><xsd:sequence
+><xsd:element
+ name="ServiceRequest"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal1:ServiceRequest"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ServiceRequest"
+><xsd:sequence
+><xsd:element
+ name="AlternatePhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MessageType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ComplaintType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SRNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SerialNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MessageIdentifier"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MSISDN"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Status"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Sub-Status"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:schema
+></types
+><message
+ name="Insert_spcOR_spcUpdate_spcSR_Input"
+><part
+ name="Insert_spcOR_spcUpdate_spcSR_Input"
+ element="tns:Insert_spcOR_spcUpdate_spcSR_Input"
+></part
+></message
+><message
+ name="Insert_spcOR_spcUpdate_spcSR_Output"
+><part
+ name="Insert_spcOR_spcUpdate_spcSR_Output"
+ element="tns:Insert_spcOR_spcUpdate_spcSR_Output"
+></part
+></message
+><portType
+ name="PTCL_spcSR_spcvia_spcIPCC_spcFinal"
+><operation
+ name="Insert_spcOR_spcUpdate_spcSR"
+><input
+ message="tns:Insert_spcOR_spcUpdate_spcSR_Input"
+></input
+><output
+ message="tns:Insert_spcOR_spcUpdate_spcSR_Output"
+></output
+></operation
+></portType
+><binding
+ name="PTCL_spcSR_spcvia_spcIPCC_spcFinal"
+ type="tns:PTCL_spcSR_spcvia_spcIPCC_spcFinal"
+><soap:binding
+ transport="http://schemas.xmlsoap.org/soap/http"
+ style="document"
+></soap:binding
+><operation
+ name="Insert_spcOR_spcUpdate_spcSR"
+><soap:operation
+ soapAction="document/http://siebel.com/CustomUI:Insert_spcOR_spcUpdate_spcSR"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+></binding
+><service
+ name="PTCL_spcSR_spcvia_spcIPCC_spcFinal"
+><port
+ binding="tns:PTCL_spcSR_spcvia_spcIPCC_spcFinal"
+ name="PTCL_spcSR_spcvia_spcIPCC_spcFinal"
+><soap:address
+ location="https://10.254.172.96:9001/siebel/app/eai_anon/enu?SWEExtSource=AnonWebService&amp;SWEExtCmd=Execute"
+></soap:address
+></port
+></service
+></definitions
+>

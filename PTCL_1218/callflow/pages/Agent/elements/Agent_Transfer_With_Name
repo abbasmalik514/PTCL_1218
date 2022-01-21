@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_return id="Element@5183863:1477558867401" name="Agent_Transfer_With_Name" version="6.0.1">
+<config>
+<settings>
+<setting name="caller_input">1</setting>
+<setting name="FromExtVXML0">LNG={Data.Session.LANGUAGE};SG={Data.Session.SKILLGROUP};PC={Data.Session.PRODUCT_CODE};IVRTIME={Data.Session.IVR_TIME};SID={Data.Session.SERVICE_NO};PRIORITY={Data.Session.PRIORITY};QT={Data.Session.END_TIME};IA={Data.Session.IS_AUTO};outage={Data.Session.outage};callerName={Data.Session.callerName};IO={Data.Session.IO};</setting>
+<setting name="FromExtVXML1">VANI={Data.Session.ani};PN={Data.Session.PN};ECC={Data.Session.ECC};</setting>
+<setting name="FromExtVXML2">WIRELESSCOUNT={Data.Session.WirelessCount};WIRELINECOUNT={Data.Session.WirelineCount};TOTALCOUNT={Data.Session.TotalCount};</setting>
+<setting name="FromExtVXML3"/>
+</settings>
+</config>
+</subdialog_return>

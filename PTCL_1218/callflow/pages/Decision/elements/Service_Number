@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@970829212:1554809197775" name="Service_Number" version="6.0.1">
+<config>
+<log>
+<data create_when="" name="SERVICE Number">{Data.Session.SERVICE_NO}</data>
+</log>
+<audio>
+<audio_group barge_in="false" count="1" name="initial_audio_group">
+<audio_item name="silence" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="silance.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

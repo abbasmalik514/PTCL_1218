@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@744079912:1578386691928" name="IsRecordFound" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="IsRecordFound" default_exit_state="RECORD_FOUND">
+        <exit_state name="INVALID_SERVICE_ID" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="INFO_ERROR_CODE" />
+                </data>
+                <constant_string value="-99" />
+            </string>
+        </exit_state>
+        <exit_state name="INVALID_PRODUCT_CODE" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="INFO_ERROR_CODE" />
+                </data>
+                <constant_string value="-98" />
+            </string>
+        </exit_state>
+        <exit_state name="INVALID_COMPLAINT_TYPE" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="INFO_ERROR_CODE" />
+                </data>
+                <constant_string value="-97" />
+            </string>
+        </exit_state>
+        <exit_state name="WS_TIMEOUT" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="INFO_ERROR_CODE" />
+                </data>
+                <constant_string value="-95" />
+            </string>
+        </exit_state>
+        <exit_state name="INTERNAL_ERROR" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="INFO_ERROR_CODE" />
+                </data>
+                <constant_string value="-94" />
+            </string>
+        </exit_state>
+        <exit_state name="INACTIVE_SERVICE_ID" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="INFO_ERROR_CODE" />
+                </data>
+                <constant_string value="-93" />
+            </string>
+        </exit_state>
+        <exit_state name="NOT_FOUND" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="INFO_ERROR_CODE" />
+                </data>
+                <constant_string value="-49" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

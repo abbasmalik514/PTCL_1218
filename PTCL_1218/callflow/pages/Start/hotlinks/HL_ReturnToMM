@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hotlink id="Element@3872665:1333622050657" name="HL_ReturnToMM" version="6.0.1">
+<config>
+<dtmf_grammar type="Inline">#</dtmf_grammar>
+</config>
+</hotlink>

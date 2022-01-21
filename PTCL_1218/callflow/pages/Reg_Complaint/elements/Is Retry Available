@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@25457549:1327912043178" name="Is Retry Available" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Is Retry Available" default_exit_state="YES">
+        <exit_state name="NO" conjugate="and">
+            <number operator="greater">
+                <data>
+                    <element name="Alternate Num Incorrect Counter" variable="count" />
+                </data>
+                <constant_number value="3" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

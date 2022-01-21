@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@1816580:1464614998013" name="PlayComplaintNumber" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="dear customer your ..." type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/decisions_status1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="PRODUCT_CODE" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.PRODUCT_CODE}.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="complaint number" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/decisions_status2.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="INFO_COMPLAINT_NUMBER" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{Data.Session.INFO_COMPLAINT_NUMBER}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">sayitsmart/{Data.Session.LANGUAGE}/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="in progress" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/decisions_status3.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<session_data>
+<data create_when="After" name="C_NUMBER">{Data.Session.INFO_COMPLAINT_NUMBER}</data>
+</session_data>
+</config>
+</voice_element>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@916330684:1582524755394" name="Def_Value" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="Before" name="IS_ABAND">Y</data>
+<data create_when="Before" name="SKILLGROUP">PSTN</data>
+<data create_when="Before" name="PRODUCT_CODE">PSTN</data>
+<data create_when="Before" name="IS_AUTO">N</data>
+<data create_when="Before" name="PRIORITY">5</data>
+<data create_when="Before" name="IO">YES</data>
+<data create_when="Before" name="OTHER_NUMBER">{Data.Session.SN}</data>
+<data create_when="Before" name="CUSTOMER_PROFILE">PTCL</data>
+<data create_when="Before" name="CaliStatus">Fresh</data>
+<data create_when="Before" name="CallEnd">Customer</data>
+<data create_when="Before" name="COMPLAINT_REG">N</data>
+</session_data>
+</config>
+</action_element>

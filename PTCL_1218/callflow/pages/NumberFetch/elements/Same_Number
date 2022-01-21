@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@1074254524:1551511002678" name="Same_Number" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="false" count="1" name="initial_audio_group">
+<audio_item name="empty" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/empty.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<session_data>
+<data create_when="After" name="sameNumber">1</data>
+</session_data>
+</config>
+</voice_element>

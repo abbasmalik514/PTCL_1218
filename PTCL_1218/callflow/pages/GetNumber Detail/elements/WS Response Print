@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@20848860:1464614998013" name="WS Response Print" version="6.0.1">
+<config>
+<source type="Class">com.ef.clients.ptcl.PrintResponse</source>
+</config>
+</action>

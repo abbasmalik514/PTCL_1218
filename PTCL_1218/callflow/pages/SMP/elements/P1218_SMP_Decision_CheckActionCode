@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@414490791:1624260441531" name="P1218_SMP_Decision_CheckActionCode" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="P1218_SMP_Decision_CheckActionCode" default_exit_state="-1">
+        <exit_state name="0" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="0" />
+            </string>
+        </exit_state>
+        <exit_state name="1" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="1" />
+            </string>
+        </exit_state>
+        <exit_state name="2" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="2" />
+            </string>
+        </exit_state>
+        <exit_state name="3" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="3" />
+            </string>
+        </exit_state>
+        <exit_state name="4" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="4" />
+            </string>
+        </exit_state>
+        <exit_state name="5" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="5" />
+            </string>
+        </exit_state>
+        <exit_state name="6" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="6" />
+            </string>
+        </exit_state>
+        <exit_state name="7" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="7" />
+            </string>
+        </exit_state>
+        <exit_state name="7.1" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="7.1" />
+            </string>
+        </exit_state>
+        <exit_state name="7.2" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="7.2" />
+            </string>
+        </exit_state>
+        <exit_state name="7.3" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="7.3" />
+            </string>
+        </exit_state>
+        <exit_state name="8" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="8" />
+            </string>
+        </exit_state>
+        <exit_state name="9" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="9" />
+            </string>
+        </exit_state>
+        <exit_state name="10" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="10" />
+            </string>
+        </exit_state>
+        <exit_state name="10.1" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="10.1" />
+            </string>
+        </exit_state>
+        <exit_state name="11" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="11" />
+            </string>
+        </exit_state>
+        <exit_state name="12" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="12" />
+            </string>
+        </exit_state>
+        <exit_state name="13" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="13" />
+            </string>
+        </exit_state>
+        <exit_state name="14" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="14" />
+            </string>
+        </exit_state>
+        <exit_state name="15" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="15" />
+            </string>
+        </exit_state>
+        <exit_state name="16" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="16" />
+            </string>
+        </exit_state>
+        <exit_state name="17" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="17" />
+            </string>
+        </exit_state>
+        <exit_state name="18" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="18" />
+            </string>
+        </exit_state>
+        <exit_state name="19" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="19" />
+            </string>
+        </exit_state>
+        <exit_state name="20" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="20" />
+            </string>
+        </exit_state>
+        <exit_state name="21" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="21" />
+            </string>
+        </exit_state>
+        <exit_state name="22" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="22" />
+            </string>
+        </exit_state>
+        <exit_state name="23" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="23" />
+            </string>
+        </exit_state>
+        <exit_state name="1.x" conjugate="and">
+            <string operator="starts_with">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="1." />
+            </string>
+        </exit_state>
+        <exit_state name="25" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="25" />
+            </string>
+        </exit_state>
+        <exit_state name="14.1" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="ActionCode" />
+                </data>
+                <constant_string value="14.1" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

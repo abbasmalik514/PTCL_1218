@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@995229710:1576858226067" name="EVO_Charji" version="6.0.1">
+<element height="46" id="Element@75609487:1576858226067" name="EVO_Charji" type="Page Entry" width="108" x="226" y="12">
+<exit_states>
+<exit_state name="next" target="Element@348301157:1576858407606"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2007739562:1576858407606" name="MaxNoInput" type="Page Connector" width="116" x="227" y="1563">
+<page_connector target="Element@1680893598:1557672981671">MaxNoInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@712348044:1576858407606" name="CustomerStatus" type="Decision" width="134" x="490" y="325">
+<exit_states>
+<exit_state name="Active" target="Element@1992088561:1577861556222"/>
+<exit_state name="DeActive" target="Element@595174190:1577860711801"/>
+<exit_state name="TempClosed" target="Element@1085324240:1577860697356"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1426323568:1576858407606" name="MaxInputWrongInput" type="Page Connector" width="164" x="365" y="1562">
+<page_connector target="Element@7400704:1398323921478">MaxInputWrongInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@434548095:1576858407606" name="EVO_Charji_Package" type="Page Connector" width="157" x="620" y="1461">
+<page_connector target="Element@541154220:1576859118552">EVO_Charji_Package<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2004607624:1576858407606" name="WS Return Code Check" type="Decision" width="172" x="194" y="208">
+<exit_states>
+<exit_state name="Yes" target="Element@41284519:1589446477899"/>
+<exit_state name="No" target="Element@370407361:1576858635806"/>
+</exit_states>
+</element>
+<element height="46" id="Element@348301157:1576858407606" name="WS Customer Status" type="Action" width="157" x="201" y="112">
+<exit_states>
+<exit_state name="done" target="Element@2004607624:1576858407606"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1577636038:1576858407606" name="EVO_Charji_Bucket" type="Page Connector" width="149" x="64" y="1468">
+<page_connector target="Element@123102827:1576859160923">EVO_Charji_Bucket<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@433278041:1576858407606" name="BVSVerifiedPlay2" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="187" x="-125" y="1564">
+<exit_states>
+<exit_state name="done" target="Element@834708206:1576858407606"/>
+</exit_states>
+</element>
+<element height="46" id="Element@834708206:1576858407606" name="Good Bye" type="Page Connector" width="101" x="-233" y="1661">
+<page_connector target="Element@15828870:1326711372571">Good Bye<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@207547212:1576858407606" name="BVSCheck2" type="Decision" width="155" x="-272" y="1462">
+<exit_states>
+<exit_state name="Not Verified" target="Element@732549356:1576858407606"/>
+<exit_state name="Verified" target="Element@433278041:1576858407606"/>
+</exit_states>
+</element>
+<element height="46" id="Element@732549356:1576858407606" name="BVSunVerifiedPlay2" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="158" x="-414" y="1566">
+<exit_states>
+<exit_state name="done" target="Element@834708206:1576858407606"/>
+</exit_states>
+</element>
+<element height="46" id="Element@212243483:1576858407606" name="Not Registered Menu" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="162" x="-141" y="325">
+<exit_states>
+<exit_state name="option1" target="Element@370407361:1576858635806"/>
+<exit_state name="option2" target="Element@647727681:1576858407606"/>
+<exit_state name="max_nomatch" target="Element@764527924:1576858407606"/>
+<exit_state name="max_noinput" target="Element@647727681:1576858407606">
+<bendpoint>
+<dim1 x="-19" y="74"/>
+<dim2 x="21" y="-75"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@764527924:1576858407606" name="MaxInputWrongInput" type="Page Connector" width="164" x="-279" y="490">
+<page_connector target="Element@7400704:1398323921478">MaxInputWrongInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@647727681:1576858407606" name="MaxNoInput" type="Page Connector" width="116" x="3" y="503">
+<page_connector target="Element@1680893598:1557672981671">MaxNoInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@370407361:1576858635806" name="Agent" type="Page Connector" width="82" x="-99" y="200">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1236423485:1576858673011" name="Agent" type="Page Connector" width="82" x="782" y="312">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1085324240:1577860697356" name="TempClosed" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="117" x="643" y="221">
+<exit_states>
+<exit_state name="done" target="Element@1236423485:1576858673011"/>
+</exit_states>
+</element>
+<element height="46" id="Element@595174190:1577860711801" name="Closed" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="86" x="682" y="409">
+<exit_states>
+<exit_state name="done" target="Element@1236423485:1576858673011"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1992088561:1577861556222" name="ProductName" type="Decision" width="155" x="485" y="526">
+<exit_states>
+<exit_state name="EVO" target="Element@1345146787:1577861704642"/>
+<exit_state name="Charji" target="Element@1295218046:1577861714752"/>
+<exit_state name="Not Available" target="Element@699618671:1577862210041"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1345146787:1577861704642" name="ProductEVO" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="114" x="693" y="619">
+<exit_states>
+<exit_state name="done" target="Element@699618671:1577862210041"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1295218046:1577861714752" name="ProductCharji" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="123" x="311" y="619">
+<exit_states>
+<exit_state name="done" target="Element@699618671:1577862210041"/>
+</exit_states>
+</element>
+<element height="46" id="Element@699618671:1577862210041" name="ProductType" type="Decision" width="118" x="506" y="723">
+<exit_states>
+<exit_state name="PrePaid" target="Element@698194781:1577862423358"/>
+<exit_state name="PostPaid" target="Element@448442282:1577862446992"/>
+<exit_state name="Not Available" target="Element@2100524977:1578297713597"/>
+</exit_states>
+</element>
+<element height="46" id="Element@698194781:1577862423358" name="ProductPrePaid" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="132" x="302" y="801">
+<exit_states>
+<exit_state name="done" target="Element@2100524977:1578297713597"/>
+</exit_states>
+</element>
+<element height="46" id="Element@448442282:1577862446992" name="ProductPostPaid" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="138" x="688" y="802">
+<exit_states>
+<exit_state name="done" target="Element@2100524977:1578297713597"/>
+</exit_states>
+</element>
+<element height="46" id="Element@696176068:1578296190537" name="Volume" type="Decision" width="91" x="853" y="1062">
+<exit_states>
+<exit_state name="Available" target="Element@594570562:1578296293794"/>
+<exit_state name="Not Available" target="Element@1066035828:1579528430161"/>
+</exit_states>
+</element>
+<element height="46" id="Element@594570562:1578296293794" name="AvailableVolumePlay" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="161" x="318" y="1068">
+<exit_states>
+<exit_state name="done" target="Element@1066035828:1579528430161"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2100524977:1578297713597" name="Expiry" type="Decision" width="112" x="513" y="904">
+<exit_states>
+<exit_state name="Not Available" target="Element@696176068:1578296190537"/>
+<exit_state name="Available" target="Element@1804445113:1578297866666"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1804445113:1578297866666" name="PlayExpiry" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="103" x="318" y="968">
+<exit_states>
+<exit_state name="done" target="Element@2067854335:1578305459972"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2067854335:1578305459972" name="PlayBalance" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="113" x="511" y="994">
+<exit_states>
+<exit_state name="done" target="Element@696176068:1578296190537"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1066035828:1579528430161" name="RemainingVolume" type="Decision" width="148" x="328" y="1175">
+<exit_states>
+<exit_state name="Available" target="Element@270168497:1579528513575"/>
+<exit_state name="Not Available" target="Element@987074542:1641894008598"/>
+</exit_states>
+</element>
+<element height="46" id="Element@270168497:1579528513575" name="RemainingVolumePlay" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="170" x="568" y="1258">
+<exit_states>
+<exit_state name="done" target="Element@987074542:1641894008598"/>
+</exit_states>
+</element>
+<element height="46" id="Element@322521984:1581504782414" name="Agent" type="Page Connector" width="82" x="861" y="1360">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@41284519:1589446477899" name="VerifyNumber" type="Decision" width="124" x="229" y="325">
+<exit_states>
+<exit_state name="Registered" target="Element@712348044:1576858407606"/>
+<exit_state name="No" target="Element@212243483:1576858407606"/>
+</exit_states>
+</element>
+<element height="46" id="Element@987074542:1641894008598" name="EVO_Charji_Menu" src="com.audium.server.voiceElement.menu.MFoundation5OptionMenu" type="Voice Element" width="151" x="312" y="1334">
+<exit_states>
+<exit_state name="option1" target="Element@207547212:1576858407606"/>
+<exit_state name="option2" target="Element@1577636038:1576858407606"/>
+<exit_state name="option3" target="Element@434548095:1576858407606"/>
+<exit_state name="option4" target="Element@1507240314:1641894191804"/>
+<exit_state name="option5" target="Element@322521984:1581504782414"/>
+<exit_state name="max_nomatch" target="Element@1426323568:1576858407606"/>
+<exit_state name="max_noinput" target="Element@2007739562:1576858407606"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1507240314:1641894191804" name="PackageChange" type="Page Connector" width="135" x="554" y="1549">
+<page_connector target="Element@2041118353:1641894153883">PackageChange<config/>
+</page_connector>
+</element>
+</page>

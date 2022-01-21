@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1400810610:1639480019604" name="P1218_GetNumberDetail_Decision_IsCompExist" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="P1218_GetNumberDetail_Decision_IsCompExist" default_exit_state="API Down">
+        <exit_state name="No" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="status" />
+                </data>
+                <constant_string value="1" />
+            </string>
+        </exit_state>
+        <exit_state name="Yes" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="status" />
+                </data>
+                <constant_string value="0" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@178412433:1621611215020" name="P1218_MainMenu2_Decision_ISMDN" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="P1218_MainMenu2_Decision_ISMDN" default_exit_state="Non-MDN">
+        <exit_state name="MDN" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="PC" />
+                </data>
+                <constant_string value="MDN" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@712348044:1576858407606" name="CustomerStatus" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CustomerStatus" default_exit_state="DeActive">
+        <exit_state name="Active" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="CustomerStatus" />
+                </data>
+                <constant_string value="Active" />
+            </string>
+        </exit_state>
+        <exit_state name="TempClosed" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="CustomerStatus" />
+                </data>
+                <constant_string value="TempClosed" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@4404019:1326710428604" name="Start" version="6.0.1">
+<element height="46" id="Element@19365882:1326710428604" name="Start Of Call" start_of_call="true" type="Page Entry" width="113" x="-623" y="-237">
+<exit_states>
+<exit_state name="next" target="Element@18992091:1326710445542"/>
+</exit_states>
+</element>
+<element height="46" id="Element@18992091:1326710445542" name="CVP Start" src="com.audium.server.voiceElement.internal.CiscoSubdialogStartElement" type="Subdialog Start" width="99" x="-262" y="-237">
+<exit_states>
+<exit_state name="done" target="Element@916330684:1582524755394"/>
+</exit_states>
+</element>
+<element height="46" id="Element@24739167:1328363731775" name="IVR Start Time" type="Action" width="124" x="-275" y="-38">
+<exit_states>
+<exit_state name="done" target="Element@599737770:1627043721841"/>
+</exit_states>
+</element>
+<element height="46" id="Element@29923710:1331367851692" name="ReturnToMM" type="Page Entry" width="121" x="-34" y="-237">
+<exit_states>
+<exit_state name="next" target="Element@32401617:1333002580456"/>
+</exit_states>
+</element>
+<element height="46" id="Element@32401617:1333002580456" name="P1218_Start_Action_TRInitialize" type="Action" width="212" x="72" y="-145">
+<exit_states>
+<exit_state name="done" target="Element@1420441:1463484170758"/>
+</exit_states>
+</element>
+<element height="46" id="Element@3872665:1333622050657" name="HL_ReturnToMM" type="Hotlink" width="141" x="293" y="-237">
+<exit_states>
+<exit_state name="goto" target="Element@32401617:1333002580456"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1420441:1463484170758" name="TagStatus" type="Page Connector" width="105" x="126" y="-42">
+<page_connector target="Element@13279370:1463484140195">TagStatus<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@26862510:1502870395166" name="CheckConfiguration" type="Action" width="157" x="-645" y="-133">
+<exit_states>
+<exit_state name="done" target="Element@463338509:1582264833476"/>
+</exit_states>
+</element>
+<element height="46" id="Element@6488584:1506097500823" name="getCount" type="Action" width="100" x="-617" y="59">
+<exit_states>
+<exit_state name="done" target="Element@24739167:1328363731775"/>
+</exit_states>
+</element>
+<element height="46" id="Element@20769543:1508139054355" name="MainMenuOneNumber" type="Page Connector" width="174" x="-301" y="176">
+<page_connector target="Element@30444207:1508227276170">MainMenuOneNumber<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@463338509:1582264833476" name="Validate_ANI" type="Action" width="117" x="-625" y="-38">
+<exit_states>
+<exit_state name="done" target="Element@6488584:1506097500823"/>
+</exit_states>
+</element>
+<element height="46" id="Element@916330684:1582524755394" name="Def_Value" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="102" x="-264" y="-133">
+<exit_states>
+<exit_state name="done" target="Element@26862510:1502870395166"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1028426682:1627029053952" name="P1218_Start_Decision_ISOnNet" type="Decision" width="209" x="-318" y="75">
+<exit_states>
+<exit_state name="ON_NET" target="Element@436190913:1627029176040"/>
+<exit_state name="OFF_NET" target="Element@1851091933:1627029174306"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1851091933:1627029174306" name="P1218_Start_AppMod_SetSN" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="198" x="79" y="134">
+<exit_states>
+<exit_state name="done" target="Element@20769543:1508139054355"/>
+</exit_states>
+</element>
+<element height="46" id="Element@436190913:1627029176040" name="P1218_Start_AppMod_SetANI" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="203" x="-668" y="146">
+<exit_states>
+<exit_state name="done" target="Element@20769543:1508139054355"/>
+</exit_states>
+</element>
+<element height="46" id="Element@599737770:1627043721841" name="Is_ONE" type="Decision" width="87" x="20" y="33">
+<exit_states>
+<exit_state name="One_NUMBER" target="Element@1028426682:1627029053952"/>
+<exit_state name="NORMAL" target="Element@1028426682:1627029053952"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@10600578:1508229774094" name="Is_ONE_Ch" version="6.0.1">
+<config>
+<source type="Class">com.ef.clients.ptcl.IS_ONE_Number</source>
+</config>
+</decision>

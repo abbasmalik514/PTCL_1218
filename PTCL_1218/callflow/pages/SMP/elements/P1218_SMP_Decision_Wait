@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@477160923:1628752473356" name="P1218_SMP_Decision_Wait" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="P1218_SMP_Decision_Wait" default_exit_state="0">
+        <exit_state name="1" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="WaitFlag" />
+                </data>
+                <constant_string value="1" />
+            </string>
+        </exit_state>
+        <exit_state name="2" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="WaitFlag" />
+                </data>
+                <constant_string value="2" />
+            </string>
+        </exit_state>
+        <exit_state name="3" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="WaitFlag" />
+                </data>
+                <constant_string value="3" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

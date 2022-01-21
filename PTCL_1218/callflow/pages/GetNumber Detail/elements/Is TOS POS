@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@6594463:1464614998013" name="Is TOS POS" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Is TOS POS" default_exit_state="Active">
+        <exit_state name="Inactive" conjugate="or">
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="1" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="2" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="3" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="21" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="23" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="20000" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="30000" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="1000000" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="1020000" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="2000000" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="2020000" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="3000000" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="3020000" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="3030000" />
+            </string>
+        </exit_state>
+        <exit_state name="TOS_POS" conjugate="or">
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="14" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="20" />
+            </string>
+        </exit_state>
+        <exit_state name="Active" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="INFO_BILLING_STATUS" />
+                </data>
+                <constant_string value="0" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

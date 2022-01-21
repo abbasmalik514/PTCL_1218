@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@15971352:1461823803490" name="Set Priority" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="Before" name="IS_AUTO">0</data>
+<data create_when="Before" name="SERVICE_NO">{Data.Session.ani}</data>
+<data create_when="Before" name="ALTERNATE_NO">{Data.Session.ani}</data>
+<data create_when="Before" name="PRODUCT_CODE">NA</data>
+<data create_when="Before" name="PRIORITY">1</data>
+</session_data>
+</config>
+</action_element>

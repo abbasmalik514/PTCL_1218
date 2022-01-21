@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@27390203:1519976147382" name="Session Variables" version="6.0.1">
+<config>
+<log>
+<data create_when="" name="ServiceSpecId">{Data.Session.SERVICE_NO}</data>
+<data create_when="" name="ProductCode">{Data.Session.PRODUCT_CODE}</data>
+</log>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="After" name="SMPCounter">0</data>
+</session_data>
+</config>
+</action_element>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@1921696728:1621611215020" name="P1218_MainMenu2_Audio_SETMDN" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="false" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="silance.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<session_data>
+<data create_when="Before" name="MDN_NO">{Data.Session.SN}</data>
+<data create_when="Before" name="SERVICE_NO">{Data.Session.SN}</data>
+<data create_when="Before" name="CF_SERVICE_NO">{Data.Session.SN}</data>
+<data create_when="Before" name="OTHER_NUMBER">{Data.Session.SN}</data>
+</session_data>
+</config>
+</voice_element>

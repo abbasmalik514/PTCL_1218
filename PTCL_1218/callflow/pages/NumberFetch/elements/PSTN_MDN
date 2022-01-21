@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@1864157637:1627453415659" name="PSTN_MDN" version="6.0.1">
+<config>
+<settings>
+<setting name="inputmode">dtmf</setting>
+<setting name="noinput_timeout">5s</setting>
+<setting name="max_noinput_count">3</setting>
+<setting name="max_nomatch_count">3</setting>
+<setting name="min_digit">5</setting>
+<setting name="max_digit">13</setting>
+<setting name="modal">false</setting>
+<setting name="secure_logging">false</setting>
+</settings>
+<vxml_properties>
+<data name="interdigittimeout">3s</data>
+</vxml_properties>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="i_nf_num_no_area" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/PSTN_MDN.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="nomatch_audio_group">
+<audio_item name="NoMatch" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/WrongInput1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="i_nf_num_no_area" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/i_nf_num_area1.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="nomatch_audio_group">
+<audio_item name="NoMatch" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/WrongInput1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="i_nf_num_no_area" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/i_nf_num_area1.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noinput_audio_group">
+<audio_item name="NoInput" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/NoInput1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="i_nf_num_no_area" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/i_nf_num_area1.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="noinput_audio_group">
+<audio_item name="NoInput" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/NoInput1.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="i_nf_num_no_area" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/i_nf_num_area1.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<session_data>
+<data create_when="After" name="SERVICE_NO">{Data.Element.PSTN_MDN.value}</data>
+<data create_when="After" name="OTHER_NUMBER">{Data.Element.PSTN_MDN.value}</data>
+</session_data>
+</config>
+</voice_element>

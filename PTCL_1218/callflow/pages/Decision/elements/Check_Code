@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@825106004:1554816053792" name="Check_Code" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check_Code" default_exit_state="Failuer">
+        <exit_state name="Success" conjugate="and">
+            <number operator="equal">
+                <data>
+                    <session name="RES_CODE" />
+                </data>
+                <constant_string value="0" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

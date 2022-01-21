@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@15904831:1331242513102" name="Play MDN" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="your entered mdn number is" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/play_mdn_new.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="MDN_NO" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="number" output_format="digits" type="digits">{Data.Session.SERVICE_NO}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">sayitsmart/{Data.Session.LANGUAGE}/</recorded_audio>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

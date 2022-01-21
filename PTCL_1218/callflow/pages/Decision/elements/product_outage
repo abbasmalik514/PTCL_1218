@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@26936045:1396970292507" name="product_outage" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="false" count="1" name="initial_audio_group">
+<audio_item name="Dynamic list of outage prompt will be played in this element" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="String_array" output_format="Prompts_of_array" type="String_array">{Data.Session.PRO_ANU}</say_it_smart>
+<recorded_audio default_audio_path="false" fileset="CheckFileSet" type="wav">http://10.191.11.116/DynamicPrompts/{Data.Session.LANGUAGE}/</recorded_audio>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<session_data>
+<data create_when="Before" name="outage">Outaage={Data.Session.OutageValue}</data>
+<data create_when="Before" name="PN">{Data.Session.OutageValue}</data>
+</session_data>
+</config>
+</voice_element>

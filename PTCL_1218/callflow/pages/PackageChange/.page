@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@279809443:1641894148687" name="PackageChange" version="6.0.1">
+<element height="46" id="Element@1172381693:1641894153883" name="VisitNearestShop" skipped="true" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="139" x="653" y="256">
+<exit_states>
+<exit_state name="done" target="Element@1851528929:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1086509152:1641894153883" name="Good Bye" type="Page Connector" width="101" x="484" y="1249">
+<page_connector target="Element@15828870:1326711372571">Good Bye<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@470661111:1641894153883" name="MaxNoInput" type="Page Connector" width="116" x="132" y="926">
+<page_connector target="Element@1680893598:1557672981671">MaxNoInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1617970995:1641894153883" name="CheckSelection" type="Decision" width="131" x="337" y="805">
+<exit_states>
+<exit_state name="Success" target="Element@1800574651:1641894153883"/>
+<exit_state name="WrongInput" target="Element@2066089480:1641894153883"/>
+<exit_state name="NoInputSilent" target="Element@2102802017:1641894153883"/>
+<exit_state name="PlayNoInput" target="Element@655121040:1641894153883"/>
+<exit_state name="RetriesExpire" target="Element@470661111:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2119539774:1641894153883" name="initMyCounter" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="127" x="75" y="666">
+<exit_states>
+<exit_state name="done" target="Element@646245182:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1857170337:1641894153883" name="CheckWrongInput" type="Decision" width="147" x="631" y="670">
+<exit_states>
+<exit_state name="Expire" target="Element@1934528461:1641894153883"/>
+<exit_state name="Available" target="Element@717428447:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2041118353:1641894153883" name="PackageChange" type="Page Entry" width="135" x="335" y="-89">
+<exit_states>
+<exit_state name="next" target="Element@905867223:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1819600087:1641894153883" name="FailPlay" skipped="true" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="90" x="235" y="1138">
+<exit_states>
+<exit_state name="done" target="Element@148964006:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1219020676:1641894153883" name="SuccessPlay" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="113" x="478" y="1138">
+<exit_states>
+<exit_state name="done" target="Element@1086509152:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1800574651:1641894153883" name="WSPackageChange" type="Action" width="152" x="327" y="929">
+<exit_states>
+<exit_state name="done" target="Element@1846714471:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@8043381:1641894153883" name="WSGetWirelessPackageList" type="Action" width="190" x="308" y="263">
+<exit_states>
+<exit_state name="done" target="Element@1608664673:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2066089480:1641894153883" name="WrongInputCounter" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="157" x="626" y="802">
+<exit_states>
+<exit_state name="done" target="Element@1857170337:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1846714471:1641894153883" name="Status" type="Decision" width="82" x="364" y="1058">
+<exit_states>
+<exit_state name="Success" target="Element@1219020676:1641894153883"/>
+<exit_state name="Fail" target="Element@148964006:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@646245182:1641894153883" name="PlayNoInputHere" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="141" x="68" y="538">
+<exit_states>
+<exit_state name="done" target="Element@2102802017:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@148964006:1641894153883" name="Agent" type="Page Connector" width="82" x="239" y="1249">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@655121040:1641894153883" name="NoInput" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="99" x="89" y="805">
+<exit_states>
+<exit_state name="done" target="Element@2119539774:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1608664673:1641894153883" name="WSReturnCode" type="Decision" width="130" x="338" y="394">
+<exit_states>
+<exit_state name="Yes" target="Element@2102802017:1641894153883"/>
+<exit_state name="No" target="Element@1851528929:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1851528929:1641894153883" name="Agent" type="Page Connector" width="101" x="673" y="373">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@905867223:1641894153883" name="SetParams" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="105" x="350" y="12">
+<exit_states>
+<exit_state name="done" target="Element@1398843378:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1934528461:1641894153883" name="MaxInputWrongInput" type="Page Connector" width="164" x="836" y="670">
+<page_connector target="Element@7400704:1398323921478">MaxInputWrongInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2102802017:1641894153883" name="PlayPackage" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="116" x="345" y="539">
+<exit_states>
+<exit_state name="done" target="Element@1617970995:1641894153883"/>
+<exit_state name="max_nomatch" target="Element@1617970995:1641894153883"/>
+<exit_state name="max_noinput" target="Element@1617970995:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@717428447:1641894153883" name="WrongInput" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="114" x="647" y="537">
+<exit_states>
+<exit_state name="done" target="Element@2102802017:1641894153883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1398843378:1641894153883" name="Cust_Type" type="Decision" width="105" x="350" y="127">
+<exit_states>
+<exit_state name="PrePaid" target="Element@8043381:1641894153883"/>
+<exit_state name="PostPaid" target="Element@1851528929:1641894153883"/>
+<exit_state name="Not Available" target="Element@1851528929:1641894153883"/>
+</exit_states>
+</element>
+</page>

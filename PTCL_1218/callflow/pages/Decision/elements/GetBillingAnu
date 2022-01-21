@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@31253613:1401880992266" name="GetBillingAnu" version="6.0.1">
+<config>
+<source type="Class">com.ef.clients.ptcl.cbrupgrade.GetBillingAnn</source>
+</config>
+</action>

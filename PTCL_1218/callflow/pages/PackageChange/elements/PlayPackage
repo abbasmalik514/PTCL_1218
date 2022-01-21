@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@2102802017:1641894153883" name="PlayPackage" version="6.0.1">
+<config>
+<log>
+<data create_when="Before" name="Press Values">{Data.Session.Press}</data>
+</log>
+<settings>
+<setting name="inputmode">dtmf</setting>
+<setting name="noinput_timeout">5s</setting>
+<setting name="max_noinput_count">1</setting>
+<setting name="max_nomatch_count">1</setting>
+<setting name="min_digit">1</setting>
+<setting name="max_digit">1</setting>
+<setting name="modal">false</setting>
+<setting name="secure_logging">false</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="ToSubscribe" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/ToSubscribe.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="volume" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{Data.Session.PVolume}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">sayitsmart/EN/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="size" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/{Data.Session.VolumeType}.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="packageIn" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/PackageIn.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="price" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{Data.Session.Price}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">sayitsmart/EN/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="RupeePerMonth" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/RupeesPerMonth.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="press_option" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="{Data.Session.LANGUAGE}/{Data.Session.Press}"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<session_data>
+<data create_when="After" name="selectedPackage">{Data.Element.PlayPackage.value}</data>
+</session_data>
+</config>
+</voice_element>

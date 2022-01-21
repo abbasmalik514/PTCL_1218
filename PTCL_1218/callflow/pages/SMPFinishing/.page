@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1892696647:1628863612561" name="SMPFinishing" version="6.0.1">
+<element height="46" id="Element@366868987:1628863747045" name="SMPNoInput" type="Page Entry" width="118" x="512" y="2">
+<exit_states>
+<exit_state name="next" target="Element@1167573406:1640123785529"/>
+</exit_states>
+</element>
+<element height="46" id="Element@540705429:1628863748767" name="SMPWrongInput" type="Page Entry" width="138" x="825" y="2">
+<exit_states>
+<exit_state name="next" target="Element@795211924:1640123911435"/>
+</exit_states>
+</element>
+<element height="46" id="Element@397784564:1628863811577" name="P1218_SMPFinishing_Action_DataCollector2" type="Action" width="281" x="435" y="160">
+<exit_states>
+<exit_state name="done" target="Element@845386378:1628863914874"/>
+</exit_states>
+</element>
+<element height="46" id="Element@209407755:1628863813217" name="P1218_SMPFinishing_Action_DataCollector3" type="Action" width="281" x="754" y="150">
+<exit_states>
+<exit_state name="done" target="Element@1056421337:1628863953674"/>
+</exit_states>
+</element>
+<element height="46" id="Element@845386378:1628863914874" name="MaxNoInput" type="Page Connector" width="116" x="515" y="237">
+<page_connector target="Element@1680893598:1557672981671">MaxNoInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1056421337:1628863953674" name="MaxInputWrongInput" type="Page Connector" width="164" x="812" y="237">
+<page_connector target="Element@7400704:1398323921478">MaxInputWrongInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@419637503:1628864434865" name="P1218_SMP_Audio_Agent" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="184" x="1131" y="237">
+<exit_states>
+<exit_state name="done" target="Element@502065339:1628864434865"/>
+</exit_states>
+</element>
+<element height="46" id="Element@502065339:1628864434865" name="P1218_SMP_Action_SetSkillGroup" type="Action" width="225" x="1111" y="322">
+<exit_states>
+<exit_state name="done" target="Element@530544069:1628864434865"/>
+</exit_states>
+</element>
+<element height="46" id="Element@530544069:1628864434865" name="SMP_Agent" type="Page Connector" width="111" x="1168" y="424">
+<page_connector target="Element@577931823:1627627010860">SMP_Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@748903510:1628864434865" name="SetSkill" type="Page Entry" width="87" x="1180" y="40">
+<exit_states>
+<exit_state name="next" target="Element@392742129:1628864506452"/>
+</exit_states>
+</element>
+<element height="46" id="Element@392742129:1628864506452" name="P1218_SMPFinishing_Action_DataCollector4" type="Action" width="281" x="1083" y="147">
+<exit_states>
+<exit_state name="done" target="Element@419637503:1628864434865"/>
+</exit_states>
+</element>
+<element height="46" id="Element@992770762:1628868008321" name="P1218_SMP_TransferToOneNumber2" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="244" x="-197" y="237">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1681937289:1628868008321" name="OneNumTransfer" type="Page Entry" width="142" x="-141" y="48">
+<exit_states>
+<exit_state name="next" target="Element@1322054347:1628868030798"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1322054347:1628868030798" name="P1218_SMPFinishing_Action_DataCollector5" type="Action" width="281" x="-215" y="150">
+<exit_states>
+<exit_state name="done" target="Element@992770762:1628868008321"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1564505790:1636526029658" name="SMPGoodBye" type="Page Entry" width="122" x="223" y="52">
+<exit_states>
+<exit_state name="next" target="Element@37149734:1636526029658"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1804889095:1636526029658" name="SMPCallEnd" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="114" x="226" y="341">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1605321708:1636526029658" name="P1218_SMPFinishing_Action_DataCollector" type="Action" width="275" x="146" y="247">
+<exit_states>
+<exit_state name="done" target="Element@1804889095:1636526029658"/>
+</exit_states>
+</element>
+<element height="46" id="Element@37149734:1636526029658" name="P1218_SMPFinishing_AppMod_SetVars" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="253" x="157" y="160">
+<exit_states>
+<exit_state name="done" target="Element@1605321708:1636526029658"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1468786339:1636526041791" name="SMPGoodBye2" type="Page Entry" width="128" x="-139" y="360">
+<exit_states>
+<exit_state name="next" target="Element@1309574679:1636526041791"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1309574679:1636526041791" name="P1218_SMPFinishing_AppMod_SetVars2" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="259" x="-205" y="468">
+<exit_states>
+<exit_state name="done" target="Element@461731850:1636526041791"/>
+</exit_states>
+</element>
+<element height="46" id="Element@461731850:1636526041791" name="P1218_SMPFinishing_Action_DataCollector6" type="Action" width="281" x="-215" y="555">
+<exit_states>
+<exit_state name="done" target="Element@1885510779:1636526159478"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1885510779:1636526159478" name="Good Bye" type="Page Connector" width="101" x="-125" y="647">
+<page_connector target="Element@15828870:1326711372571">Good Bye<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@646831180:1638426547070" name="P1218_SMPFinishing_AppMod_SetVars3" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="259" x="482" y="442">
+<exit_states>
+<exit_state name="done" target="Element@174803527:1638426547070"/>
+</exit_states>
+</element>
+<element height="46" id="Element@174803527:1638426547070" name="SMPFinishing_Action_DataCollector7" type="Action" width="245" x="489" y="529">
+<exit_states>
+<exit_state name="done" target="Element@949695918:1638426670777"/>
+</exit_states>
+</element>
+<element height="46" id="Element@165249193:1638426547070" name="SMPGoodByeCallBack" type="Page Entry" width="167" x="528" y="334">
+<exit_states>
+<exit_state name="next" target="Element@646831180:1638426547070"/>
+</exit_states>
+</element>
+<element height="46" id="Element@949695918:1638426670777" name="P1218_SMPFinishing_Audio_GoodBye" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="248" x="170" y="445">
+<exit_states>
+<exit_state name="done" target="Element@1804889095:1636526029658"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1167573406:1640123785529" name="SMP_SetNoResponse" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="161" x="495" y="82">
+<exit_states>
+<exit_state name="done" target="Element@397784564:1628863811577"/>
+</exit_states>
+</element>
+<element height="46" id="Element@795211924:1640123911435" name="SMP_SetNoResponse2" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="167" x="810" y="77">
+<exit_states>
+<exit_state name="done" target="Element@209407755:1628863813217"/>
+</exit_states>
+</element>
+</page>

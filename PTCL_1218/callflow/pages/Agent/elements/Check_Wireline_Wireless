@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@9379076:1503994186080" name="Check_Wireline_Wireless" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check_Wireline_Wireless" default_exit_state="Wireline">
+        <exit_state name="Wireless" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="SKILLGROUP" />
+                </data>
+                <constant_string value="EVO" />
+            </string>
+        </exit_state>
+        <exit_state name="Wireless" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="SKILLGROUP" />
+                </data>
+                <constant_string value="WALL" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

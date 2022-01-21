@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@3076080:1346941437027" name="CheckCallerType" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CheckCallerType" default_exit_state="ON_NET">
+        <exit_state name="OFF_NET" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="CALLER_TYPE" />
+                </data>
+                <constant_string value="OFF_NET" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

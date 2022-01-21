@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@19293074:1326713272025" name="Decision" version="6.0.1">
+<element height="46" id="Element@22224755:1326713272025" name="Decision" type="Page Entry" width="95" x="-489" y="-581">
+<exit_states>
+<exit_state name="next" target="Element@15135000:1331244265430"/>
+</exit_states>
+</element>
+<element height="46" id="Element@11854921:1331244265430" name="TR_ComplaintMenu" type="Action" width="180" x="775" y="457">
+<exit_states>
+<exit_state name="done" target="Element@13811805:1464614852868"/>
+</exit_states>
+</element>
+<element height="46" id="Element@31265254:1331244265430" name="Agent" type="Page Connector" width="82" x="586" y="259">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@32936290:1331244265430" name="AutoRegister" type="Page Entry" width="118" x="569" y="555">
+<exit_states>
+<exit_state name="next" target="Element@13811805:1464614852868"/>
+</exit_states>
+</element>
+<element height="46" id="Element@7102098:1331244265430" name="ComplaintMenu" src="com.audium.server.voiceElement.menu.MFoundation4OptionMenu" type="Voice Element" width="137" x="300" y="155">
+<exit_states>
+<exit_state name="option1" target="Element@1636843200:1551511937239"/>
+<exit_state name="option2" target="Element@3757606:1361464182418"/>
+<exit_state name="option3" target="Element@31253613:1401880992266"/>
+<exit_state name="option4" target="Element@10307467:1361462557033"/>
+<exit_state name="max_nomatch" target="Element@21480231:1398409328816"/>
+<exit_state name="max_noinput" target="Element@1104483882:1560245352899"/>
+</exit_states>
+</element>
+<element height="46" id="Element@15135000:1331244265430" name="Decision Page" type="Flag" width="124" x="-258" y="-581">
+<exit_states>
+<exit_state name="done" target="Element@970829212:1554809197775"/>
+</exit_states>
+</element>
+<element height="46" id="Element@19948449:1331244265430" name="TR_ComplaintMenu_2" type="Action" width="167" x="788" y="155">
+<exit_states>
+<exit_state name="done" target="Element@16589396:1331682263128"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2282849:1331244265430" name="TR_InitializeDecision" type="Action" width="157" x="-106" y="329">
+<exit_states>
+<exit_state name="done" target="Element@28685666:1397035656405"/>
+</exit_states>
+</element>
+<element height="46" id="Element@16589396:1331682263128" name="SetNoAuto_D" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="121" x="805" y="374">
+<exit_states>
+<exit_state name="done" target="Element@31265254:1331244265430"/>
+</exit_states>
+</element>
+<element height="46" id="Element@18027118:1341263625713" name="Set_SG_Billing" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="123" x="807" y="-91">
+<exit_states>
+<exit_state name="done" target="Element@6259867:1379584409487"/>
+</exit_states>
+</element>
+<element height="46" id="Element@10307467:1361462557033" name="AgTrn_1" type="Flag" width="94" x="580" y="155">
+<exit_states>
+<exit_state name="done" target="Element@19948449:1331244265430"/>
+</exit_states>
+</element>
+<element height="46" id="Element@14796128:1361464162480" name="Auto" type="Flag" width="88" x="326" y="457">
+<exit_states>
+<exit_state name="done" target="Element@11854921:1331244265430"/>
+</exit_states>
+</element>
+<element height="46" id="Element@3757606:1361464182418" name="Status1" type="Flag" width="88" x="581" y="374">
+<exit_states>
+<exit_state name="done" target="Element@11854921:1331244265430"/>
+</exit_states>
+</element>
+<element height="46" id="Element@6259867:1379584409487" name="New_Billing_promp" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="153" x="796" y="37">
+<exit_states>
+<exit_state name="done" target="Element@19948449:1331244265430"/>
+</exit_states>
+</element>
+<element height="46" id="Element@31475322:1396970187086" name="IsProductFound" type="Decision" width="134" x="-499" y="271">
+<exit_states>
+<exit_state name="Yes" target="Element@26936045:1396970292507"/>
+<exit_state name="No" target="Element@7355288:1429258290129"/>
+</exit_states>
+</element>
+<element height="46" id="Element@26936045:1396970292507" name="product_outage" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="134" x="-265" y="271">
+<exit_states>
+<exit_state name="done" target="Element@7355288:1429258290129"/>
+</exit_states>
+</element>
+<element height="46" id="Element@6351711:1396970551038" name="IsRegionalFound" type="Decision" width="138" x="-501" y="61">
+<exit_states>
+<exit_state name="Yes" target="Element@6882092:1396970739023"/>
+<exit_state name="No" target="Element@12113781:1429258145660"/>
+</exit_states>
+</element>
+<element height="46" id="Element@6882092:1396970739023" name="regional_outage" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="135" x="-265" y="61">
+<exit_states>
+<exit_state name="done" target="Element@12113781:1429258145660"/>
+</exit_states>
+</element>
+<element height="46" id="Element@28685666:1397035656405" name="IsOutageFound" type="Decision" width="131" x="-42" y="457">
+<exit_states>
+<exit_state name="Yes" target="Element@1332588:1397809088920"/>
+<exit_state name="No" target="Element@199572847:1627044422435"/>
+</exit_states>
+</element>
+<element height="46" id="Element@11505807:1397562899096" name="Agent" type="Page Connector" width="82" x="348" y="555">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1332588:1397809088920" name="OutageMenu" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="120" x="-37" y="555">
+<exit_states>
+<exit_state name="option1" target="Element@1636843200:1551511937239"/>
+<exit_state name="option2" target="Element@16806289:1429258552722"/>
+<exit_state name="max_nomatch" target="Element@27875008:1397809457561"/>
+<exit_state name="max_noinput" target="Element@27875008:1397809457561"/>
+</exit_states>
+</element>
+<element height="46" id="Element@27875008:1397809457561" name="Good Bye" type="Page Connector" width="101" x="-276" y="555">
+<page_connector target="Element@15828870:1326711372571">Good Bye<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@21480231:1398409328816" name="MaxInputWrongInput" type="Page Connector" width="164" x="408" y="374">
+<page_connector target="Element@7400704:1398323921478">MaxInputWrongInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@16828278:1399284803225" name="Region_outage_prompt" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="174" x="-285" y="374">
+<exit_states>
+<exit_state name="done" target="Element@1332588:1397809088920"/>
+</exit_states>
+</element>
+<element height="46" id="Element@29909270:1399284803225" name="IsRegionPlusProduct_Found" type="Decision" width="198" x="-91" y="61">
+<exit_states>
+<exit_state name="Yes" target="Element@16828278:1399284803225"/>
+<exit_state name="No" target="Element@2282849:1331244265430"/>
+</exit_states>
+</element>
+<element height="46" id="Element@18407750:1401880992266" name="IfBillingAnuFound" type="Decision" width="146" x="559" y="-91">
+<exit_states>
+<exit_state name="Yes" target="Element@7195293:1401880992266"/>
+<exit_state name="No" target="Element@18027118:1341263625713"/>
+</exit_states>
+</element>
+<element height="46" id="Element@7195293:1401880992266" name="Billing_Dynamic" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="135" x="666" y="-198">
+<exit_states>
+<exit_state name="done" target="Element@18027118:1341263625713"/>
+</exit_states>
+</element>
+<element height="46" id="Element@31253613:1401880992266" name="GetBillingAnu" type="Action" width="123" x="569" y="37">
+<exit_states>
+<exit_state name="done" target="Element@18407750:1401880992266"/>
+</exit_states>
+</element>
+<element height="46" id="Element@12113781:1429258145660" name="Outage_Product" type="Action" width="136" x="-500" y="155">
+<exit_states>
+<exit_state name="done" target="Element@31475322:1396970187086"/>
+</exit_states>
+</element>
+<element height="46" id="Element@7355288:1429258290129" name="Outage_RegionPlusProduct" type="Action" width="195" x="-295" y="155">
+<exit_states>
+<exit_state name="done" target="Element@29909270:1399284803225"/>
+</exit_states>
+</element>
+<element height="46" id="Element@16806289:1429258552722" name="SG_NetworkOutage" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="153" x="131" y="555">
+<exit_states>
+<exit_state name="done" target="Element@11505807:1397562899096"/>
+</exit_states>
+</element>
+<element height="15" id="Element@11712808:1433495014926" type="Comment" width="168" x="-716" y="324">
+<comment><![CDATA[This caller will get outage menu]]></comment>
+</element>
+<element height="46" id="Element@15902204:1433496510102" name="Complaint_Menu" type="Page Entry" width="142" x="304" y="-91">
+<exit_states>
+<exit_state name="next" target="Element@7102098:1331244265430"/>
+</exit_states>
+</element>
+<element height="46" id="Element@676800:1447140319505" name="Is_PSTN_Caller" type="Decision" width="127" x="143" y="206">
+<exit_states>
+<exit_state name="Yes" target="Element@7102098:1331244265430"/>
+<exit_state name="No" target="Element@7102098:1331244265430"/>
+</exit_states>
+</element>
+<element height="46" id="Element@13811805:1464614852868" name="GetNumberDetail" type="Page Connector" width="145" x="793" y="555">
+<page_connector target="Element@18261695:1464614687210">GetNumberDetail<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@8664690:1507640922941" name="Is_List_Prompt_Found" type="Decision" width="167" x="-281" y="-117">
+<exit_states>
+<exit_state name="No" target="Element@10641512:1507641805422"/>
+<exit_state name="CallerListPrompt" target="Element@25430137:1507641193606"/>
+</exit_states>
+</element>
+<element height="46" id="Element@25430137:1507641193606" name="List_Prompt" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="113" x="-488" y="-117">
+<exit_states>
+<exit_state name="done" target="Element@5276164:1511334130002"/>
+</exit_states>
+</element>
+<element height="46" id="Element@10641512:1507641805422" name="Outage_Regional" type="Action" width="140" x="-503" y="-29">
+<exit_states>
+<exit_state name="done" target="Element@6351711:1396970551038"/>
+</exit_states>
+</element>
+<element height="46" id="Element@4124467:1511334095423" name="NetworkOutage" type="Page Entry" width="134" x="139" y="624">
+<exit_states>
+<exit_state name="next" target="Element@16806289:1429258552722"/>
+</exit_states>
+</element>
+<element height="46" id="Element@5276164:1511334130002" name="NetworkOutage" type="Page Connector" width="134" x="-686" y="-118">
+<page_connector target="Element@4124467:1511334095423">NetworkOutage<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1636843200:1551511937239" name="SET_AUTO" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="106" x="283" y="381">
+<exit_states>
+<exit_state name="done" target="Element@14796128:1361464162480"/>
+</exit_states>
+</element>
+<element height="46" id="Element@809824388:1554801927692" name="Check_Status" type="Decision" width="120" x="-257" y="-224">
+<exit_states>
+<exit_state name="YES" target="Element@2064974702:1554802445516"/>
+<exit_state name="NO" target="Element@8664690:1507640922941"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2064974702:1554802445516" name="OutagePrompt" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="129" x="-56" y="-117">
+<exit_states>
+<exit_state name="done" target="Element@8664690:1507640922941"/>
+</exit_states>
+</element>
+<element height="46" id="Element@970829212:1554809197775" name="Service_Number" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="171" x="-55" y="-581">
+<exit_states>
+<exit_state name="done" target="Element@721165407:1579007692554"/>
+</exit_states>
+</element>
+<element height="46" id="Element@789197734:1554815913368" name="Check_Outage" type="Action" width="127" x="-260" y="-340">
+<exit_states>
+<exit_state name="done" target="Element@825106004:1554816053792"/>
+</exit_states>
+</element>
+<element height="46" id="Element@825106004:1554816053792" name="Check_Code" type="Decision" width="116" x="-49" y="-340">
+<exit_states>
+<exit_state name="Success" target="Element@809824388:1554801927692"/>
+<exit_state name="Failuer" target="Element@309404644:1554816150786"/>
+</exit_states>
+</element>
+<element height="46" id="Element@309404644:1554816150786" name="Agent" type="Page Connector" width="82" x="-32" y="-224">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1104483882:1560245352899" name="MaxNoInput" type="Page Connector" width="116" x="158" y="61">
+<page_connector target="Element@1680893598:1557672981671">MaxNoInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@721165407:1579007692554" name="SkillDecision" type="Decision" width="119" x="-29" y="-453">
+<exit_states>
+<exit_state name="BB" target="Element@1273173225:1579007772911"/>
+<exit_state name="Others" target="Element@789197734:1554815913368"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1273173225:1579007772911" name="BBUsageWS" type="Action" width="119" x="-501" y="-453">
+<exit_states>
+<exit_state name="done" target="Element@1974206740:1579007878399"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1974206740:1579007878399" name="BB_Usage_WS_ResponseCode" type="Decision" width="206" x="-545" y="-340">
+<exit_states>
+<exit_state name="Yes" target="Element@17836866:1579007955043"/>
+<exit_state name="No" target="Element@789197734:1554815913368"/>
+</exit_states>
+</element>
+<element height="46" id="Element@17836866:1579007955043" name="PlayBBUsage" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="118" x="-501" y="-224">
+<exit_states>
+<exit_state name="done" target="Element@789197734:1554815913368"/>
+</exit_states>
+</element>
+<element height="46" id="Element@199572847:1627044422435" name="P1218_Desision_Decision_SmpFlag" type="Decision" width="231" x="91" y="275">
+<exit_states>
+<exit_state name="ON" target="Element@1067175157:1627044481569"/>
+<exit_state name="OFF" target="Element@676800:1447140319505"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1067175157:1627044481569" name="GetNumberDetail" type="Page Connector" width="145" x="134" y="382">
+<page_connector target="Element@18261695:1464614687210">GetNumberDetail<config/>
+</page_connector>
+</element>
+</page>

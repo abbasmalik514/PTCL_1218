@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2143054:1502875352640" name="IsSpecialCaller" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="IsSpecialCaller" default_exit_state="WirelessSpecial">
+        <exit_state name="WirelineSpecial" conjugate="and">
+            <number operator="greater">
+                <data>
+                    <session name="WirelineCount" />
+                </data>
+                <data>
+                    <session name="WirelessCount" />
+                </data>
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

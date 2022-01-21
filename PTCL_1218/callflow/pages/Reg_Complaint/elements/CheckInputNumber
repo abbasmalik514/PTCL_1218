@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@13248639:1518615443136" name="CheckInputNumber" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CheckInputNumber" default_exit_state="YES">
+        <exit_state name="NO" conjugate="and">
+            <string operator="starts_with">
+                <data>
+                    <session name="INPUT_NO" />
+                </data>
+                <constant_string value="1" />
+            </string>
+        </exit_state>
+        <exit_state name="InvalidNumber" conjugate="and">
+            <string operator="contains">
+                <data>
+                    <session name="INPUT_NO" />
+                </data>
+                <constant_string value="*" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

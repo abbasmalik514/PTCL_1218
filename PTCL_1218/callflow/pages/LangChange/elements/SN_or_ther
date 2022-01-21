@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@6428479:1502370591223" name="SN_or_ther" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="SN_or_ther" default_exit_state="other">
+        <exit_state name="SN" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="Sindhi_Region" />
+                </data>
+                <constant_string value="YES" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

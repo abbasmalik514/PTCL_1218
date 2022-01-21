@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions
+ xmlns="http://schemas.xmlsoap.org/wsdl/"
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+ targetNamespace="http://siebel.com/CustomUI"
+ xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:tns="http://siebel.com/CustomUI"
+><types
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/CustomUI"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:element
+ name="Get_spcNumber_spcDetails_1_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="Service_spcId"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Product_spcCode"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="Get_spcNumber_spcDetails_1_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="Billing_spcStatus"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BulkOutage"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ComplaintNumber"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ComplaintType"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Error_spcCode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Error_spcMessage"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="QueuePriority"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+></xsd:schema
+></types
+><message
+ name="Get_spcNumber_spcDetails_1_Input"
+><part
+ name="Get_spcNumber_spcDetails_1_Input"
+ element="tns:Get_spcNumber_spcDetails_1_Input"
+></part
+></message
+><message
+ name="Get_spcNumber_spcDetails_1_Output"
+><part
+ name="Get_spcNumber_spcDetails_1_Output"
+ element="tns:Get_spcNumber_spcDetails_1_Output"
+></part
+></message
+><portType
+ name="PTCL_spcGet_spcNumber_spcDetails"
+><operation
+ name="Get_spcNumber_spcDetails_1"
+><input
+ message="tns:Get_spcNumber_spcDetails_1_Input"
+></input
+><output
+ message="tns:Get_spcNumber_spcDetails_1_Output"
+></output
+></operation
+></portType
+><binding
+ name="PTCL_spcGet_spcNumber_spcDetails"
+ type="tns:PTCL_spcGet_spcNumber_spcDetails"
+><soap:binding
+ transport="http://schemas.xmlsoap.org/soap/http"
+ style="document"
+></soap:binding
+><operation
+ name="Get_spcNumber_spcDetails_1"
+><soap:operation
+ soapAction="document/http://siebel.com/CustomUI:Get_spcNumber_spcDetails_1"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+></binding
+><service
+ name="PTCL_spcGet_spcNumber_spcDetails"
+><port
+ binding="tns:PTCL_spcGet_spcNumber_spcDetails"
+ name="PTCL_spcGet_spcNumber_spcDetails"
+><soap:address
+ location="http://crmibd.ptcl.net.pk/eai_anon_enu/start.swe?SWEExtSource=AnonWebService&amp;SWEExtCmd=Execute"
+></soap:address
+></port
+></service
+></definitions
+>

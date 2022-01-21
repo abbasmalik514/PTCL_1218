@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@21025465:1463484140195" name="TagStatus" version="6.0.1">
+<element height="46" id="Element@13279370:1463484140195" name="TagStatus" type="Page Entry" width="105" x="298" y="27">
+<exit_states>
+<exit_state name="next" target="Element@26305968:1463484397476"/>
+</exit_states>
+</element>
+<element height="46" id="Element@6939690:1463484397476" name="Set_Default_Language" skipped="true" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="166" x="468" y="661">
+<exit_states>
+<exit_state name="done" target="Element@172130:1463484397476"/>
+</exit_states>
+</element>
+<element height="46" id="Element@11213602:1463484397476" name="ErrorOccured" skipped="true" type="Hotevent" width="120" x="480" y="422">
+<exit_states>
+<exit_state name="goto"/>
+</exit_states>
+</element>
+<element height="46" id="Element@24696257:1463484397476" name="IsLangExist" skipped="true" type="Decision" width="107" x="492" y="505">
+<exit_states>
+<exit_state name="Yes" target="Element@172130:1463484397476"/>
+<exit_state name="No"/>
+</exit_states>
+</element>
+<element height="46" id="Element@172130:1463484397476" name="MainMenu2" type="Page Connector" width="114" x="304" y="661">
+<page_connector target="Element@15351937:1461823631529">MainMenu2<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1678256:1463484397476" name="Get_General_Anu" type="Action" width="140" x="279" y="304">
+<exit_states>
+<exit_state name="done" target="Element@7317738:1463484397476"/>
+</exit_states>
+</element>
+<element height="46" id="Element@7317738:1463484397476" name="Is_Anu_Found" type="Decision" width="124" x="292" y="417">
+<exit_states>
+<exit_state name="Yes" target="Element@12237746:1463484397476"/>
+<exit_state name="No" target="Element@797203:1502875398654"/>
+</exit_states>
+</element>
+<element height="46" id="Element@12237746:1463484397476" name="Play_Gen_Anu" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="125" x="89" y="460">
+<exit_states>
+<exit_state name="done" target="Element@797203:1502875398654"/>
+</exit_states>
+</element>
+<element height="46" id="Element@26305968:1463484397476" name="Check_Tag_Status_2" type="Decision" width="156" x="276" y="153">
+<exit_states>
+<exit_state name="No" target="Element@1678256:1463484397476"/>
+<exit_state name="REP" target="Element@17297428:1463484547937"/>
+<exit_state name="MAL" target="Element@2878279:1463484547937"/>
+<exit_state name="REP_1218" target="Element@32163426:1463484547937"/>
+</exit_states>
+</element>
+<element height="46" id="Element@17297428:1463484547937" name="REP_Caller" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="116" x="63" y="161">
+<exit_states>
+<exit_state name="done" target="Element@8809392:1463484547937"/>
+</exit_states>
+</element>
+<element height="46" id="Element@8809392:1463484547937" name="Agent" type="Page Connector" width="96" x="-95" y="224">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@23306541:1463484547937" name="Good Bye" type="Page Connector" width="101" x="497" y="308">
+<page_connector target="Element@15828870:1326711372571">Good Bye<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2878279:1463484547937" name="MAL_Caller" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="117" x="487" y="151">
+<exit_states>
+<exit_state name="done" target="Element@23306541:1463484547937"/>
+</exit_states>
+</element>
+<element height="46" id="Element@32163426:1463484547937" name="Repeated_1218" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="128" x="72" y="289">
+<exit_states>
+<exit_state name="done" target="Element@8809392:1463484547937"/>
+</exit_states>
+</element>
+<element height="46" id="Element@33440761:1502875352640" name="IS_Count_Five" type="Decision" width="132" x="78" y="664">
+<exit_states>
+<exit_state name="YES" target="Element@2143054:1502875352640"/>
+<exit_state name="NO" target="Element@7429203:1502875352640"/>
+</exit_states>
+</element>
+<element height="46" id="Element@14501290:1502875352640" name="Agent" type="Page Connector" width="82" x="-108" y="504">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@20805397:1502875352640" name="Agent" type="Page Connector" width="96" x="99" y="941">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@17355183:1502875352640" name="Set_SG_WirelessExpert" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="165" x="212" y="851">
+<exit_states>
+<exit_state name="done" target="Element@20805397:1502875352640"/>
+</exit_states>
+</element>
+<element height="46" id="Element@7429203:1502875352640" name="Setting Skill" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="111" x="-122" y="663">
+<exit_states>
+<exit_state name="done" target="Element@14501290:1502875352640"/>
+</exit_states>
+</element>
+<element height="46" id="Element@19084713:1502875352640" name="Set_SG_WirelineExpert" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="165" x="-92" y="849">
+<exit_states>
+<exit_state name="done" target="Element@20805397:1502875352640"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2143054:1502875352640" name="IsSpecialCaller" type="Decision" width="125" x="85" y="763">
+<exit_states>
+<exit_state name="WirelineSpecial" target="Element@19084713:1502875352640"/>
+<exit_state name="WirelessSpecial" target="Element@17355183:1502875352640"/>
+</exit_states>
+</element>
+<element height="46" id="Element@797203:1502875398654" name="IS_Platinum" type="Decision" width="112" x="298" y="521">
+<exit_states>
+<exit_state name="Yes" target="Element@33440761:1502875352640"/>
+<exit_state name="No" target="Element@172130:1463484397476"/>
+</exit_states>
+</element>
+</page>

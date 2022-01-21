@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@761826301:1624625737676" name="P1218_SMP_Decision_ChkResp" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="P1218_SMP_Decision_ChkResp" default_exit_state="Others">
+        <exit_state name="Message on Screen" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="message" />
+                </data>
+                <constant_string value="Message on Screen" />
+            </string>
+        </exit_state>
+        <exit_state name="Missing Channel" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="message" />
+                </data>
+                <constant_string value="Missing Channel" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

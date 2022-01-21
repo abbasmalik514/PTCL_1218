@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><!--File CheckNEOutage_InlineSchema1.xsd, application CheckNEOutage--><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.ptcl.net.pk/CheckNEOutage/" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.ptcl.net.pk/CheckNEOutage/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <xsd:element ibmSchExtn:docRoot="true" name="NEOutage">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="SecurityParam" type="tns:SecurityParamType"/>
+          	<xsd:element name="PSTN" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element ibmSchExtn:docRoot="true" name="NEOutageResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+
+          	<xsd:element name="RetCode" type="xsd:string"/>
+          	<xsd:element name="RetDesc" type="xsd:string"/>
+          	<xsd:element maxOccurs="1" minOccurs="0" name="OutageStatus" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    
+      <xsd:complexType name="SecurityParamType">
+      	<xsd:sequence>
+      		<xsd:element name="UserName" type="xsd:string"/>
+      		<xsd:element name="Password" type="xsd:string"/>
+      	</xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>

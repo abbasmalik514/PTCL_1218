@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@9428177:1461823631529" name="MainMenu2" version="6.0.1">
+<element height="46" id="Element@15351937:1461823631529" name="MainMenu2" type="Page Entry" width="114" x="-459" y="-51">
+<exit_states>
+<exit_state name="next" target="Element@10600578:1508229774094"/>
+</exit_states>
+</element>
+<element height="46" id="Element@32965157:1461823803490" name="Lang_Change" type="Page Connector" width="122" x="206" y="129">
+<page_connector target="Element@28426665:1429111190289">Lang_Change<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@15971352:1461823803490" name="Set Priority" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="114" x="-191" y="745">
+<exit_states>
+<exit_state name="done" target="Element@28620287:1461823803490"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1800872:1461823803490" name="Broadband" type="Flag" width="108" x="-307" y="380">
+<exit_states>
+<exit_state name="done" target="Element@1273438878:1629117827805"/>
+</exit_states>
+</element>
+<element height="46" id="Element@28620287:1461823803490" name="Agent" type="Page Connector" width="82" x="-385" y="745">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@22956773:1461823803490" name="PSTN" type="Flag" width="88" x="-375" y="297">
+<exit_states>
+<exit_state name="done" target="Element@1273438878:1629117827805"/>
+</exit_states>
+</element>
+<element height="46" id="Element@22192702:1461823803490" name="Gen_MM_WrngInput_AgTrn" type="Flag" width="198" x="943" y="461">
+<exit_states>
+<exit_state name="done" target="Element@1690756:1461823803490"/>
+</exit_states>
+</element>
+<element height="46" id="Element@19534397:1461823803490" name="SetNoAuto_P" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="120" x="976" y="360">
+<exit_states>
+<exit_state name="done" target="Element@22192702:1461823803490"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1808344:1461823803490" name="OtherServices" type="Flag" width="122" x="146" y="396">
+<exit_states>
+<exit_state name="done" target="Element@29048372:1461823803490"/>
+</exit_states>
+</element>
+<element height="46" id="Element@3972678:1461823803490" name="IPTV" type="Flag" width="96" x="-15" y="537">
+<exit_states>
+<exit_state name="done" target="Element@28169043:1461823803490"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1504335:1461823803490" name="ReturnToMM" type="Page Connector" width="122" x="984" y="253">
+<page_connector target="Element@29923710:1331367851692">ReturnToMM<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@16011811:1461823803490" name="ReplayCounter" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="128" x="1024" y="168">
+<exit_states>
+<exit_state name="done" target="Element@18062024:1461823803490"/>
+</exit_states>
+</element>
+<element height="46" id="Element@17749905:1461823803490" name="ReplayC" type="Page Entry" width="94" x="1041" y="74">
+<exit_states>
+<exit_state name="next" target="Element@16011811:1461823803490"/>
+</exit_states>
+</element>
+<element height="46" id="Element@28169043:1461823803490" name="Agent" type="Page Connector" width="82" x="166" y="578">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@4746525:1461823803490" name="Exist in GPON List" type="Decision" width="143" x="-323" y="640">
+<comment><![CDATA[Check the caller status in GetCallerStatus class. If caller exist in GPON list (from CBR) 
+set the caller priority as 1]]></comment>
+<exit_states>
+<exit_state name="YES" target="Element@15971352:1461823803490"/>
+<exit_state name="NO" target="Element@28620287:1461823803490"/>
+</exit_states>
+</element>
+<element height="46" id="Element@32567242:1461823803490" name="MainMenu" src="com.audium.server.voiceElement.menu.MFoundation8OptionMenu" type="Voice Element" width="130" x="85" y="-51">
+<exit_states>
+<exit_state name="option1" target="Element@3252714:1464065885537"/>
+<exit_state name="option2" target="Element@3252714:1464065885537"/>
+<exit_state name="option3" target="Element@3252714:1464065885537"/>
+<exit_state name="option4" target="Element@32867165:1464069503751"/>
+<exit_state name="option5" target="Element@3252714:1464065885537"/>
+<exit_state name="option6" target="Element@32867165:1464069503751"/>
+<exit_state name="option7" target="Element@3252714:1464065885537"/>
+<exit_state name="option8" target="Element@16911353:1508227476459"/>
+<exit_state name="max_nomatch" target="Element@13133441:1464069981241"/>
+<exit_state name="max_noinput" target="Element@135039789:1560245586574"/>
+</exit_states>
+</element>
+<element height="46" id="Element@16884979:1461823803490" name="SetSG_GPON" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="126" x="-314" y="537">
+<exit_states>
+<exit_state name="done" target="Element@4746525:1461823803490"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1690756:1461823803490" name="MaxInputWrongInput" type="Page Connector" width="164" x="731" y="472">
+<page_connector target="Element@7400704:1398323921478">MaxInputWrongInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@18062024:1461823803490" name="D_MaxReplayed" type="Decision" width="133" x="1241" y="254">
+<exit_states>
+<exit_state name="YES" target="Element@19534397:1461823803490"/>
+<exit_state name="NO" target="Element@1504335:1461823803490"/>
+</exit_states>
+</element>
+<element height="46" id="Element@29048372:1461823803490" name="Set_SG_WLL" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="121" x="382" y="362">
+<exit_states>
+<exit_state name="done" target="Element@28169043:1461823803490"/>
+</exit_states>
+</element>
+<element height="46" id="Element@8196858:1464065885537" name="Set_SG_WirelineExpert2" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="171" x="-488" y="219">
+<exit_states>
+<exit_state name="done" target="Element@7253922:1464066697702"/>
+</exit_states>
+</element>
+<element height="46" id="Element@3252714:1464065885537" name="Is_Wireline_Special" type="Decision" width="165" x="67" y="223">
+<exit_states>
+<exit_state name="PSTN" target="Element@22956773:1461823803490"/>
+<exit_state name="BB" target="Element@1800872:1461823803490"/>
+<exit_state name="GPON" target="Element@16884979:1461823803490"/>
+<exit_state name="IPTV" target="Element@3972678:1461823803490"/>
+<exit_state name="OtherServices" target="Element@1808344:1461823803490"/>
+<exit_state name="LangChange" target="Element@32965157:1461823803490"/>
+<exit_state name="Wireline" target="Element@8196858:1464065885537"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2282142:1464065885537" name="Set_SG_WirelessExpert1" skipped="true" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="171" x="614" y="332">
+<exit_states>
+<exit_state name="done" target="Element@28169043:1461823803490"/>
+</exit_states>
+</element>
+<element height="46" id="Element@7253922:1464066697702" name="Agent" type="Page Connector" width="82" x="-443" y="123">
+<page_connector target="Element@23110385:1326711395946">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@32867165:1464069503751" name="Is_Wireless_Special" type="Decision" width="172" x="356" y="182">
+<exit_states>
+<exit_state name="WirelessSpecial" target="Element@29048372:1461823803490"/>
+<exit_state name="EVO" target="Element@14953495:1464069774315"/>
+<exit_state name="WLL" target="Element@29048372:1461823803490"/>
+</exit_states>
+</element>
+<element height="46" id="Element@14953495:1464069774315" name="EVO_MAIN" type="Page Connector" width="108" x="676" y="182">
+<page_connector target="Element@1678252074:1576858068053">EVO_MAIN<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@13133441:1464069981241" name="MaxInputWrongInput" type="Page Connector" width="164" x="667" y="35">
+<page_connector target="Element@7400704:1398323921478">MaxInputWrongInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@16911353:1508227476459" name="Lang_Change" type="Page Connector" width="122" x="-164" y="45">
+<page_connector target="Element@28426665:1429111190289">Lang_Change<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@23465655:1508228357446" name="IsWirelessSpecial" type="Page Entry" width="151" x="367" y="81">
+<exit_states>
+<exit_state name="next" target="Element@32867165:1464069503751"/>
+</exit_states>
+</element>
+<element height="46" id="Element@27185636:1508228384493" name="IsWirelineSpecial" type="Page Entry" width="138" x="-172" y="123">
+<exit_states>
+<exit_state name="next" target="Element@3252714:1464065885537"/>
+</exit_states>
+</element>
+<element height="46" id="Element@10600578:1508229774094" name="Is_ONE_Ch" type="Decision" width="145" x="-175" y="-51">
+<exit_states>
+<exit_state name="One_NUMBER" target="Element@23446070:1508229774094"/>
+<exit_state name="NORMAL" target="Element@32567242:1461823803490"/>
+</exit_states>
+</element>
+<element height="46" id="Element@23446070:1508229774094" name="MainMenuOneNumber" type="Page Connector" width="174" x="-489" y="45">
+<page_connector target="Element@30444207:1508227276170">MainMenuOneNumber<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@135039789:1560245586574" name="MaxNoInput" type="Page Connector" width="116" x="532" y="-45">
+<page_connector target="Element@1680893598:1557672981671">MaxNoInput<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@357867221:1621610930088" name="P1218_MainMenu2_Decision_ISOnNet" type="Decision" width="249" x="-666" y="380">
+<exit_states>
+<exit_state name="ON_NET" target="Element@1412358587:1621610961473"/>
+<exit_state name="OFF_NET" target="Element@362832060:1621610961473"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1412358587:1621610961473" name="NumberFetch" type="Page Connector" width="134" x="-845" y="470">
+<page_connector target="Element@10588558:1326713260071">NumberFetch<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@362832060:1621610961473" name="P1218_MainMenu2_Decision_ISPSTN" type="Decision" width="243" x="-663" y="537">
+<exit_states>
+<exit_state name="PSTN" target="Element@1478994561:1621611003020"/>
+<exit_state name="Non-PSTN" target="Element@1412358587:1621610961473"/>
+<exit_state name="MDN" target="Element@509846975:1627044103371"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1478994561:1621611003020" name="P1218_MainMenu2_AppMod_SetOtherNum" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="280" x="-682" y="640">
+<exit_states>
+<exit_state name="done" target="Element@1548059938:1621611003020"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1548059938:1621611003020" name="Decision" type="Page Connector" width="95" x="-589" y="745">
+<page_connector target="Element@22224755:1326713272025">Decision<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@509846975:1627044103371" name="P1218_MainMenu2_Decision_SmpFlag" type="Decision" width="251" x="-1159" y="537">
+<exit_states>
+<exit_state name="ON" target="Element@795916986:1627051138858"/>
+<exit_state name="OFF" target="Element@1412358587:1621610961473"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2050832084:1627044178780" name="EVO_Charji" type="Page Connector" width="108" x="-890" y="610">
+<page_connector target="Element@75609487:1576858226067">EVO_Charji<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@795916986:1627051138858" name="P1218_MainMenu_AppModifier" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="216" x="-1142" y="665">
+<exit_states>
+<exit_state name="done" target="Element@2050832084:1627044178780"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1273438878:1629117827805" name="SetCaliStatus" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="118" x="-425" y="469">
+<exit_states>
+<exit_state name="done" target="Element@357867221:1621610930088"/>
+</exit_states>
+</element>
+</page>

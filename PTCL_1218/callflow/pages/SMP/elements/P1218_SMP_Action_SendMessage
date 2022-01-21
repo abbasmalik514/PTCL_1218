@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@1150886393:1624599724581" name="P1218_SMP_Action_SendMessage" version="6.0.1">
+<config>
+<source type="Class">com.ef.clients.ptcl.SMP.MessageWS</source>
+</config>
+</action>

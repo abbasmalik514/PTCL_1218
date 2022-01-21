@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@22061484:1398323897243" name="MAxInputWrongInput" version="6.0.1">
+<element height="46" id="Element@18062375:1398323921478" name="WrongInputMsg" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="137" x="278" y="332">
+<exit_states>
+<exit_state name="done" target="Element@4289352:1401110073016"/>
+</exit_states>
+</element>
+<element height="46" id="Element@7400704:1398323921478" name="MaxInputWrongInput" type="Page Entry" width="164" x="267" y="35">
+<exit_states>
+<exit_state name="next" target="Element@13972206:1401208279611"/>
+</exit_states>
+</element>
+<element height="46" id="Element@21963896:1398930477020" name="GoodBye" skipped="true" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="98" x="546" y="184">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@4289352:1401110073016" name="Good Bye" type="Page Connector" width="101" x="296" y="435">
+<page_connector target="Element@15828870:1326711372571">Good Bye<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@20596268:1401208279611" name="FlashInput2" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="111" x="290" y="228">
+<exit_states>
+<exit_state name="done" target="Element@18062375:1398323921478"/>
+</exit_states>
+</element>
+<element height="46" id="Element@13972206:1401208279611" name="FlushInput1" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="112" x="290" y="137">
+<exit_states>
+<exit_state name="option1" target="Element@20596268:1401208279611"/>
+<exit_state name="option2" target="Element@20596268:1401208279611"/>
+<exit_state name="max_nomatch" target="Element@20596268:1401208279611"/>
+<exit_state name="max_noinput" target="Element@20596268:1401208279611"/>
+</exit_states>
+</element>
+</page>

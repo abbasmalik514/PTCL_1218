@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@9325538:1331242513102" name="ValidateMDN" version="6.0.1">
+<config>
+<source type="Class">com.ef.clients.ptcl.ValidateMDN</source>
+</config>
+</decision>

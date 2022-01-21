@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1119137001:1624613353084" name="P1218_SMP_Decision_APIError2" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="P1218_SMP_Decision_APIError2" default_exit_state="API Up">
+        <exit_state name="API Down" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="Status" />
+                </data>
+                <constant_string value="error" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

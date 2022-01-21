@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@502065339:1628864434865" name="P1218_SMP_Action_SetSkillGroup" version="6.0.1">
+<config>
+<source type="Class">com.ef.clients.ptcl.SMP.SetSkillGroup</source>
+</config>
+</action>

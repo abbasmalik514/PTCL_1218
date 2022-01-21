@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@2534818:1469789009040" name="Variables_To_ICM" version="6.0.1">
+<config>
+<log>
+<data create_when="" name="LANG">{Data.Session.LANGUAGE}</data>
+<data create_when="" name="SG">{Data.Session.SKILLGROUP}</data>
+<data create_when="" name="PROCODE">{Data.Session.PRODUCT_CODE}</data>
+<data create_when="" name="IVRTIME">{Data.Session.IVR_TIME}</data>
+<data create_when="" name="SID">{Data.Session.SERVICE_NO}</data>
+<data create_when="" name="PRIORITY">{Data.Session.PRIORITY}</data>
+<data create_when="" name="QT">{Data.Session.END_TIME}</data>
+<data create_when="" name="ISAUTO">{Data.Session.IS_AUTO}</data>
+<data create_when="" name="outage">{Data.Session.outage}</data>
+<data create_when="" name="TRAIL">{Data.Session.TRAIL}</data>
+<data create_when="" name="IsAgentTransfer">{Data.Session.IsAgentTransfer}</data>
+<data create_when="" name="PN">{Data.Session.PN}</data>
+</log>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="Before" name="TRAIL">{Data.Session.TRAIL}{Data.Session.outage}</data>
+<data create_when="After" name="IS_ABAND">N</data>
+<data create_when="Before" name="IsAgentTransfer">1</data>
+<data create_when="After" name="CallEnd">IVR</data>
+</session_data>
+</config>
+</action_element>

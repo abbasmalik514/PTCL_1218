@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@7195293:1401880992266" name="Billing_Dynamic" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="false" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="String_array" output_format="Prompts_of_array" type="String_array">{Data.Session.BILLING_ANU}</say_it_smart>
+<recorded_audio default_audio_path="false" fileset="CheckFileSet" type="wav">http://10.191.11.116/DynamicPrompts/{Data.Session.LANGUAGE}/</recorded_audio>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>
